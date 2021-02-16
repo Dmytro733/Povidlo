@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Povidlo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="http://kenwheeler.github.io/slick/slick/slick-theme.css">
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
     <header class="header">
@@ -24,8 +27,7 @@
                         <path d="M2.87109 0.150391C1.28795 0.150391 0 1.41099 0 2.96052C0 4.51005 1.28795 5.77064 2.87109 5.77064C4.45424 5.77064 5.74219 4.51005 5.74219 2.96052C5.74219 1.41099 4.45424 0.150391 2.87109 0.150391ZM2.87109 4.16486C2.19259 4.16486 1.64062 3.62462 1.64062 2.96052C1.64062 2.29642 2.19259 1.75618 2.87109 1.75618C3.5496 1.75618 4.10156 2.29642 4.10156 2.96052C4.10156 3.62462 3.5496 4.16486 2.87109 4.16486Z" fill="#333333"/>
                         <path d="M10.8711 0.150391C9.28795 0.150391 8 1.41099 8 2.96052C8 4.51005 9.28795 5.77064 10.8711 5.77064C12.4542 5.77064 13.7422 4.51005 13.7422 2.96052C13.7422 1.41099 12.4542 0.150391 10.8711 0.150391ZM10.8711 4.16486C10.1926 4.16486 9.64062 3.62462 9.64062 2.96052C9.64062 2.29642 10.1926 1.75618 10.8711 1.75618C11.5496 1.75618 12.1016 2.29642 12.1016 2.96052C12.1016 3.62462 11.5496 4.16486 10.8711 4.16486Z" fill="#333333" fill-opacity="0.2"/>
                         <path d="M18.8711 0.150391C17.2879 0.150391 16 1.41099 16 2.96052C16 4.51005 17.2879 5.77064 18.8711 5.77064C20.4542 5.77064 21.7422 4.51005 21.7422 2.96052C21.7422 1.41099 20.4542 0.150391 18.8711 0.150391ZM18.8711 4.16486C18.1926 4.16486 17.6406 3.62462 17.6406 2.96052C17.6406 2.29642 18.1926 1.75618 18.8711 1.75618C19.5496 1.75618 20.1016 2.29642 20.1016 2.96052C20.1016 3.62462 19.5496 4.16486 18.8711 4.16486Z" fill="#333333"/>
-                        </svg>
-                        
+                    </svg>
                 </span>
             </div>
             <div class="header_scroll-logo">
@@ -45,7 +47,7 @@
                 <li class="menu-item"><a href="#prices">Меню</a></li>
                 <li class="menu-item"><a href="#slider">Галерея</a></li>
                 <li class="menu-item"><a href="#company-info">Контакти</a></li>
-                <li class="cart-menu"><span>Корзина</span>
+                <li class="cart-in-menu hide"><span>Корзина</span>
                     <svg width="30" height="30" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 24C6.13261 24 6.25979 23.9473 6.35355 23.8536C6.44732 23.7598 6.5 23.6326 6.5 23.5V20.5C6.5 20.3674 6.44732 20.2402 6.35355 20.1464C6.25979 20.0527 6.13261 20 6 20C5.86739 20 5.74021 20.0527 5.64645 20.1464C5.55268 20.2402 5.5 20.3674 5.5 20.5V23.5C5.5 23.6326 5.55268 23.7598 5.64645 23.8536C5.74021 23.9473 5.86739 24 6 24Z" fill="#333333"/>
                     <path d="M30.5 14.5H23.6293L18.8961 2.45185C18.7694 2.1301 18.5354 1.862 18.2338 1.6929C17.9321 1.52379 17.5813 1.46406 17.2407 1.52381C16.9001 1.58355 16.5906 1.75911 16.3645 2.02078C16.1384 2.28245 16.0097 2.61417 16 2.95985C15.991 2.61381 15.8625 2.28155 15.6364 2.01941C15.4104 1.75727 15.1006 1.58139 14.7597 1.52158C14.4187 1.46178 14.0676 1.52173 13.7658 1.69129C13.464 1.86084 13.2301 2.12955 13.1039 2.45185L8.37069 14.5H1.5C1.36739 14.5 1.24021 14.5527 1.14645 14.6465C1.05268 14.7403 1 14.8674 1 15V18C1.00012 18.121 1.04404 18.2377 1.12364 18.3287C1.20324 18.4197 1.31312 18.4788 1.43294 18.495L2.848 29.8152C2.96806 30.7757 3.82175 31.5 4.83388 31.5H27.1661C28.1782 31.5 29.0319 30.7757 29.152 29.8152L30.5671 18.495C30.6869 18.4788 30.7968 18.4197 30.8764 18.3287C30.956 18.2377 30.9999 18.121 31 18V15C31 14.8674 30.9473 14.7403 30.8536 14.6465C30.7598 14.5527 30.6326 14.5 30.5 14.5ZM17.0417 2.80053C17.0812 2.70991 17.1467 2.63305 17.2299 2.57965C17.3132 2.52626 17.4103 2.49873 17.5092 2.50055C17.608 2.50237 17.7041 2.53345 17.7853 2.58987C17.8665 2.64629 17.9291 2.72552 17.9653 2.81753L23.2826 16.3522L22.3518 16.7178L17.0347 3.18316C17.0105 3.1221 16.9986 3.05683 16.9998 2.99114C17.001 2.92546 17.0152 2.86067 17.0417 2.80053ZM21.5847 17.5H10.4153L11.201 15.5H20.799L21.5847 17.5ZM15.8961 3.54885C15.9592 3.3889 15.9943 3.21931 16 3.04747C16.0057 3.21931 16.0408 3.3889 16.1039 3.54885L20.4062 14.5H11.5938L15.8961 3.54885ZM14.0347 2.8176C14.058 2.75557 14.0935 2.69881 14.1389 2.6506C14.1844 2.6024 14.239 2.56371 14.2996 2.5368C14.3601 2.50988 14.4254 2.49527 14.4917 2.49382C14.558 2.49237 14.6238 2.5041 14.6855 2.52834C14.7472 2.55258 14.8034 2.58883 14.851 2.635C14.8985 2.68117 14.9364 2.73633 14.9624 2.79727C14.9885 2.85821 15.0021 2.92372 15.0026 2.98999C15.0031 3.05626 14.9904 3.12196 14.9653 3.18328L9.64819 16.7178L8.71744 16.3522L14.0347 2.8176ZM2 15.5H7.97781L7.60388 16.4519C7.55539 16.5753 7.55792 16.7129 7.61091 16.8345C7.6639 16.956 7.76301 17.0516 7.88644 17.1L8.9045 17.5H2V15.5ZM28.1597 29.6912C28.1021 30.1524 27.6749 30.5 27.1659 30.5H4.83388C4.32506 30.5 3.89794 30.1524 3.84013 29.6912L2.44138 18.5H29.5586L28.1597 29.6912ZM30 17.5H23.0955L24.1136 17.1C24.237 17.0516 24.3361 16.956 24.3891 16.8345C24.4421 16.7129 24.4446 16.5753 24.3961 16.4519L24.0222 15.5H30V17.5Z" fill="#333333"/>
@@ -164,27 +166,40 @@
     <section class="slider" id="slider">
         <div class="slider_menu">
             <ul class="slider_menu-items menu">
-                <li class="item"><a href="#">Всі фото</a></li>
-                <li class="item"><a href="#">Ігрова зона длч діток</a></li>
-                <li class="item"><a href="#">Страви української та європейської кухні</a></li>
+                <li class="item" data-type-img="allFoto">Всі фото</li>
+                <li class="item" data-type-img="Game-area">Ігрова зона длч діток</li>
+                <li class="item" data-type-img="Kitchen-dishes">Страви української та європейської кухні</li>
+                <li class="item" data-type-img="banquet-hall">Банкетний зал</li>
             </ul>
         </div>
         <div class="slider_img">
-            <div class="img-i" style="background-image: url('img/slider/Rectangle10.png');"></div>
-            <div class="img-i" style="background-image: url('img/slider/Rectangle11.png');"></div>
-            <div class="img-i" style="background-image: url('img/slider/Rectangle5.png');"></div>
-            <div class="img-i" style="background-image: url('img/slider/Rectangle9.png');"></div>
-            <div class="arrow-left" class="arrow-left">
-                <svg class="left" width="42" height="132" viewBox="0 0 42 132" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="42" height="132" transform="translate(42 132) rotate(180)" fill="white"/>
-                    <path d="M25 74L17 66L25 58" stroke="#333333"/>
-                </svg>
+            <div class="wrap" data-type-img="allFoto">
+                <img src="img/slider/Rectangle10.png" alt="">
+                <img src="img/slider/Rectangle5.png" alt="">
+                <img src="img/slider/Rectangle9.png" alt="">
+                <img src="img/slider/Rectangle11.png" alt="">
+                <img src="img/slider/Rectangle10.png" alt="">
             </div>
-            <div class="arrow-right">
-                <svg class="right" width="42" height="132" viewBox="0 0 42 132" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="42" height="132" fill="white"/>
-                    <path d="M17 58L25 66L17 74" stroke="#333333"/>
-                </svg>
+            <div class="wrap hide" data-type-img="Game-area">
+                <img src="img/slider/Rectangle10.png" alt="">
+                <img src="img/slider/Rectangle5.png" alt="">
+                <img src="img/slider/Rectangle9.png" alt="">
+                <img src="img/slider/Rectangle11.png" alt="">
+                <img src="img/slider/Rectangle10.png" alt="">
+            </div>
+            <div class="wrap hide" data-type-img="Kitchen-dishes">
+                <img src="img/slider/Rectangle10.png" alt="">
+                <img src="img/slider/Rectangle5.png" alt="">
+                <img src="img/slider/Rectangle9.png" alt="">
+                <img src="img/slider/Rectangle11.png" alt="">
+                <img src="img/slider/Rectangle10.png" alt="">
+            </div>
+            <div class="wrap hide" data-type-img="banquet-hall">
+                <img src="img/slider/Rectangle10.png" alt="">
+                <img src="img/slider/Rectangle5.png" alt="">
+                <img src="img/slider/Rectangle9.png" alt="">
+                <img src="img/slider/Rectangle11.png" alt="">
+                <img src="img/slider/Rectangle10.png" alt="">
             </div>
         </div>
     </section>
@@ -192,14 +207,14 @@
         <div class="prices_menu">
             <h1 class="title">Меню</h1>
             <ul class="prices_menu-items menu">
-                <li class="item"><a href="#">Закуски</a></li>
-                <li class="item"><a href="#">Салати</a></li>
-                <li class="item"><a href="#">Піца</a></li>
-                <li class="item"><a href="#">Дитячі страви</a></li>
+                <li class="item" data-type-of-food='Type1'>Закуски</li>
+                <li class="item" data-type-of-food='Type2'>Салати</li>
+                <li class="item" data-type-of-food='Type3'>Піца</li>
+                <li class="item" data-type-of-food='Type4'>Дитячі страви</li>
             </ul>
         </div>
-        <div class="prices_wrapper">
-            <div class="row prices_products">
+        <div class="prices_wrapper" data-type-of-food='Type1'>
+            <div class="row prices_products" data-type-of-food='page1'>
                 <div class="col-xl-6 product">
                     <div class="product-img">
                         <img src="img/food/Rectangle_13.png" alt="">
@@ -325,9 +340,75 @@
                     </div>
                 </div>
             </div>
+            <div class="row prices_products hide" data-type-of-food='page2'>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_13.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Паста ”Italiano pronto”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>57грн</span> | <span class="weight">450грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+        
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_14.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Салат ”Мiкс зелені”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>53грн</span> | <span class="weight">200грам</span>
+                            </div>
+                            <p>Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="prices_footer">
                 <div class="prices_footer-pagination">
-                    <button class="footer-pagination_prev btn btn-green">
+                    <button class="footer-pagination_prev btn btn-green" data-type-of-food='page1'>
                         <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/>
                         </svg>
@@ -336,7 +417,787 @@
                         <span class="pagination_current">1</span>
                         <span class="pagination_last">2</span>
                     </div>
-                    <button class="footer-pagination_next btn btn-green">
+                    <button class="footer-pagination_next btn btn-green" data-type-of-food='page2'>
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/>
+                        </svg>
+                    </button>            
+                </div>
+                
+                <span class="go-to-cart btn">Перейти  до кошика
+                    <svg width="25" height="20" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 24C6.13261 24 6.25979 23.9473 6.35355 23.8536C6.44732 23.7598 6.5 23.6326 6.5 23.5V20.5C6.5 20.3674 6.44732 20.2402 6.35355 20.1464C6.25979 20.0527 6.13261 20 6 20C5.86739 20 5.74021 20.0527 5.64645 20.1464C5.55268 20.2402 5.5 20.3674 5.5 20.5V23.5C5.5 23.6326 5.55268 23.7598 5.64645 23.8536C5.74021 23.9473 5.86739 24 6 24Z" fill="#333333"/>
+                        <path d="M30.5 14.5H23.6293L18.8961 2.45185C18.7694 2.1301 18.5354 1.862 18.2338 1.6929C17.9321 1.52379 17.5813 1.46406 17.2407 1.52381C16.9001 1.58355 16.5906 1.75911 16.3645 2.02078C16.1384 2.28245 16.0097 2.61417 16 2.95985C15.991 2.61381 15.8625 2.28155 15.6364 2.01941C15.4104 1.75727 15.1006 1.58139 14.7597 1.52158C14.4187 1.46178 14.0676 1.52173 13.7658 1.69129C13.464 1.86084 13.2301 2.12955 13.1039 2.45185L8.37069 14.5H1.5C1.36739 14.5 1.24021 14.5527 1.14645 14.6465C1.05268 14.7403 1 14.8674 1 15V18C1.00012 18.121 1.04404 18.2377 1.12364 18.3287C1.20324 18.4197 1.31312 18.4788 1.43294 18.495L2.848 29.8152C2.96806 30.7757 3.82175 31.5 4.83388 31.5H27.1661C28.1782 31.5 29.0319 30.7757 29.152 29.8152L30.5671 18.495C30.6869 18.4788 30.7968 18.4197 30.8764 18.3287C30.956 18.2377 30.9999 18.121 31 18V15C31 14.8674 30.9473 14.7403 30.8536 14.6465C30.7598 14.5527 30.6326 14.5 30.5 14.5ZM17.0417 2.80053C17.0812 2.70991 17.1467 2.63305 17.2299 2.57965C17.3132 2.52626 17.4103 2.49873 17.5092 2.50055C17.608 2.50237 17.7041 2.53345 17.7853 2.58987C17.8665 2.64629 17.9291 2.72552 17.9653 2.81753L23.2826 16.3522L22.3518 16.7178L17.0347 3.18316C17.0105 3.1221 16.9986 3.05683 16.9998 2.99114C17.001 2.92546 17.0152 2.86067 17.0417 2.80053ZM21.5847 17.5H10.4153L11.201 15.5H20.799L21.5847 17.5ZM15.8961 3.54885C15.9592 3.3889 15.9943 3.21931 16 3.04747C16.0057 3.21931 16.0408 3.3889 16.1039 3.54885L20.4062 14.5H11.5938L15.8961 3.54885ZM14.0347 2.8176C14.058 2.75557 14.0935 2.69881 14.1389 2.6506C14.1844 2.6024 14.239 2.56371 14.2996 2.5368C14.3601 2.50988 14.4254 2.49527 14.4917 2.49382C14.558 2.49237 14.6238 2.5041 14.6855 2.52834C14.7472 2.55258 14.8034 2.58883 14.851 2.635C14.8985 2.68117 14.9364 2.73633 14.9624 2.79727C14.9885 2.85821 15.0021 2.92372 15.0026 2.98999C15.0031 3.05626 14.9904 3.12196 14.9653 3.18328L9.64819 16.7178L8.71744 16.3522L14.0347 2.8176ZM2 15.5H7.97781L7.60388 16.4519C7.55539 16.5753 7.55792 16.7129 7.61091 16.8345C7.6639 16.956 7.76301 17.0516 7.88644 17.1L8.9045 17.5H2V15.5ZM28.1597 29.6912C28.1021 30.1524 27.6749 30.5 27.1659 30.5H4.83388C4.32506 30.5 3.89794 30.1524 3.84013 29.6912L2.44138 18.5H29.5586L28.1597 29.6912ZM30 17.5H23.0955L24.1136 17.1C24.237 17.0516 24.3361 16.956 24.3891 16.8345C24.4421 16.7129 24.4446 16.5753 24.3961 16.4519L24.0222 15.5H30V17.5Z" fill="#333333"/>
+                        <path d="M6 29C6.13261 29 6.25979 28.9473 6.35355 28.8536C6.44732 28.7598 6.5 28.6326 6.5 28.5V25.5C6.5 25.3674 6.44732 25.2402 6.35355 25.1464C6.25979 25.0527 6.13261 25 6 25C5.86739 25 5.74021 25.0527 5.64645 25.1464C5.55268 25.2402 5.5 25.3674 5.5 25.5V28.5C5.5 28.6326 5.55268 28.7598 5.64645 28.8536C5.74021 28.9473 5.86739 29 6 29Z" fill="#333333"/>
+                        <path d="M8 24C8.13261 24 8.25979 23.9473 8.35355 23.8536C8.44732 23.7598 8.5 23.6326 8.5 23.5V20.5C8.5 20.3674 8.44732 20.2402 8.35355 20.1464C8.25979 20.0527 8.13261 20 8 20C7.86739 20 7.74021 20.0527 7.64645 20.1464C7.55268 20.2402 7.5 20.3674 7.5 20.5V23.5C7.5 23.6326 7.55268 23.7598 7.64645 23.8536C7.74021 23.9473 7.86739 24 8 24Z" fill="#333333"/>
+                        <path d="M8 29C8.13261 29 8.25979 28.9473 8.35355 28.8536C8.44732 28.7598 8.5 28.6326 8.5 28.5V25.5C8.5 25.3674 8.44732 25.2402 8.35355 25.1464C8.25979 25.0527 8.13261 25 8 25C7.86739 25 7.74021 25.0527 7.64645 25.1464C7.55268 25.2402 7.5 25.3674 7.5 25.5V28.5C7.5 28.6326 7.55268 28.7598 7.64645 28.8536C7.74021 28.9473 7.86739 29 8 29Z" fill="#333333"/>
+                        <path d="M10 24C10.1326 24 10.2598 23.9473 10.3536 23.8536C10.4473 23.7598 10.5 23.6326 10.5 23.5V20.5C10.5 20.3674 10.4473 20.2402 10.3536 20.1464C10.2598 20.0527 10.1326 20 10 20C9.86739 20 9.74021 20.0527 9.64645 20.1464C9.55268 20.2402 9.5 20.3674 9.5 20.5V23.5C9.5 23.6326 9.55268 23.7598 9.64645 23.8536C9.74021 23.9473 9.86739 24 10 24Z" fill="#333333"/>
+                        <path d="M10 29C10.1326 29 10.2598 28.9473 10.3536 28.8536C10.4473 28.7598 10.5 28.6326 10.5 28.5V25.5C10.5 25.3674 10.4473 25.2402 10.3536 25.1464C10.2598 25.0527 10.1326 25 10 25C9.86739 25 9.74021 25.0527 9.64645 25.1464C9.55268 25.2402 9.5 25.3674 9.5 25.5V28.5C9.5 28.6326 9.55268 28.7598 9.64645 28.8536C9.74021 28.9473 9.86739 29 10 29Z" fill="#333333"/>
+                        <path d="M12 24C12.1326 24 12.2598 23.9473 12.3536 23.8536C12.4473 23.7598 12.5 23.6326 12.5 23.5V20.5C12.5 20.3674 12.4473 20.2402 12.3536 20.1464C12.2598 20.0527 12.1326 20 12 20C11.8674 20 11.7402 20.0527 11.6464 20.1464C11.5527 20.2402 11.5 20.3674 11.5 20.5V23.5C11.5 23.6326 11.5527 23.7598 11.6464 23.8536C11.7402 23.9473 11.8674 24 12 24Z" fill="#333333"/>
+                        <path d="M12 29C12.1326 29 12.2598 28.9473 12.3536 28.8536C12.4473 28.7598 12.5 28.6326 12.5 28.5V25.5C12.5 25.3674 12.4473 25.2402 12.3536 25.1464C12.2598 25.0527 12.1326 25 12 25C11.8674 25 11.7402 25.0527 11.6464 25.1464C11.5527 25.2402 11.5 25.3674 11.5 25.5V28.5C11.5 28.6326 11.5527 28.7598 11.6464 28.8536C11.7402 28.9473 11.8674 29 12 29Z" fill="#333333"/>
+                        <path d="M20 24C20.1326 24 20.2598 23.9473 20.3536 23.8536C20.4473 23.7598 20.5 23.6326 20.5 23.5V20.5C20.5 20.3674 20.4473 20.2402 20.3536 20.1464C20.2598 20.0527 20.1326 20 20 20C19.8674 20 19.7402 20.0527 19.6464 20.1464C19.5527 20.2402 19.5 20.3674 19.5 20.5V23.5C19.5 23.6326 19.5527 23.7598 19.6464 23.8536C19.7402 23.9473 19.8674 24 20 24Z" fill="#333333"/>
+                        <path d="M20 29C20.1326 29 20.2598 28.9473 20.3536 28.8536C20.4473 28.7598 20.5 28.6326 20.5 28.5V25.5C20.5 25.3674 20.4473 25.2402 20.3536 25.1464C20.2598 25.0527 20.1326 25 20 25C19.8674 25 19.7402 25.0527 19.6464 25.1464C19.5527 25.2402 19.5 25.3674 19.5 25.5V28.5C19.5 28.6326 19.5527 28.7598 19.6464 28.8536C19.7402 28.9473 19.8674 29 20 29Z" fill="#333333"/>
+                        <path d="M22 24C22.1326 24 22.2598 23.9473 22.3536 23.8536C22.4473 23.7598 22.5 23.6326 22.5 23.5V20.5C22.5 20.3674 22.4473 20.2402 22.3536 20.1464C22.2598 20.0527 22.1326 20 22 20C21.8674 20 21.7402 20.0527 21.6464 20.1464C21.5527 20.2402 21.5 20.3674 21.5 20.5V23.5C21.5 23.6326 21.5527 23.7598 21.6464 23.8536C21.7402 23.9473 21.8674 24 22 24Z" fill="#333333"/>
+                        <path d="M22 29C22.1326 29 22.2598 28.9473 22.3536 28.8536C22.4473 28.7598 22.5 28.6326 22.5 28.5V25.5C22.5 25.3674 22.4473 25.2402 22.3536 25.1464C22.2598 25.0527 22.1326 25 22 25C21.8674 25 21.7402 25.0527 21.6464 25.1464C21.5527 25.2402 21.5 25.3674 21.5 25.5V28.5C21.5 28.6326 21.5527 28.7598 21.6464 28.8536C21.7402 28.9473 21.8674 29 22 29Z" fill="#333333"/>
+                        <path d="M24 24C24.1326 24 24.2598 23.9473 24.3536 23.8536C24.4473 23.7598 24.5 23.6326 24.5 23.5V20.5C24.5 20.3674 24.4473 20.2402 24.3536 20.1464C24.2598 20.0527 24.1326 20 24 20C23.8674 20 23.7402 20.0527 23.6464 20.1464C23.5527 20.2402 23.5 20.3674 23.5 20.5V23.5C23.5 23.6326 23.5527 23.7598 23.6464 23.8536C23.7402 23.9473 23.8674 24 24 24Z" fill="#333333"/>
+                        <path d="M24 29C24.1326 29 24.2598 28.9473 24.3536 28.8536C24.4473 28.7598 24.5 28.6326 24.5 28.5V25.5C24.5 25.3674 24.4473 25.2402 24.3536 25.1464C24.2598 25.0527 24.1326 25 24 25C23.8674 25 23.7402 25.0527 23.6464 25.1464C23.5527 25.2402 23.5 25.3674 23.5 25.5V28.5C23.5 28.6326 23.5527 28.7598 23.6464 28.8536C23.7402 28.9473 23.8674 29 24 29Z" fill="#333333"/>
+                        <path d="M26 24C26.1326 24 26.2598 23.9473 26.3536 23.8536C26.4473 23.7598 26.5 23.6326 26.5 23.5V20.5C26.5 20.3674 26.4473 20.2402 26.3536 20.1464C26.2598 20.0527 26.1326 20 26 20C25.8674 20 25.7402 20.0527 25.6464 20.1464C25.5527 20.2402 25.5 20.3674 25.5 20.5V23.5C25.5 23.6326 25.5527 23.7598 25.6464 23.8536C25.7402 23.9473 25.8674 24 26 24Z" fill="#333333"/>
+                        <path d="M26 29C26.1326 29 26.2598 28.9473 26.3536 28.8536C26.4473 28.7598 26.5 28.6326 26.5 28.5V25.5C26.5 25.3674 26.4473 25.2402 26.3536 25.1464C26.2598 25.0527 26.1326 25 26 25C25.8674 25 25.7402 25.0527 25.6464 25.1464C25.5527 25.2402 25.5 25.3674 25.5 25.5V28.5C25.5 28.6326 25.5527 28.7598 25.6464 28.8536C25.7402 28.9473 25.8674 29 26 29Z" fill="#333333"/>
+                        <path d="M16 24C16.1326 24 16.2598 23.9473 16.3536 23.8536C16.4473 23.7598 16.5 23.6326 16.5 23.5V20.5C16.5 20.3674 16.4473 20.2402 16.3536 20.1464C16.2598 20.0527 16.1326 20 16 20C15.8674 20 15.7402 20.0527 15.6464 20.1464C15.5527 20.2402 15.5 20.3674 15.5 20.5V23.5C15.5 23.6326 15.5527 23.7598 15.6464 23.8536C15.7402 23.9473 15.8674 24 16 24Z" fill="#333333"/>
+                        <path d="M16 29C16.1326 29 16.2598 28.9473 16.3536 28.8536C16.4473 28.7598 16.5 28.6326 16.5 28.5V25.5C16.5 25.3674 16.4473 25.2402 16.3536 25.1464C16.2598 25.0527 16.1326 25 16 25C15.8674 25 15.7402 25.0527 15.6464 25.1464C15.5527 25.2402 15.5 25.3674 15.5 25.5V28.5C15.5 28.6326 15.5527 28.7598 15.6464 28.8536C15.7402 28.9473 15.8674 29 16 29Z" fill="#333333"/>
+                        <path d="M14 24C14.1326 24 14.2598 23.9473 14.3536 23.8536C14.4473 23.7598 14.5 23.6326 14.5 23.5V20.5C14.5 20.3674 14.4473 20.2402 14.3536 20.1464C14.2598 20.0527 14.1326 20 14 20C13.8674 20 13.7402 20.0527 13.6464 20.1464C13.5527 20.2402 13.5 20.3674 13.5 20.5V23.5C13.5 23.6326 13.5527 23.7598 13.6464 23.8536C13.7402 23.9473 13.8674 24 14 24Z" fill="#333333"/>
+                        <path d="M14 29C14.1326 29 14.2598 28.9473 14.3536 28.8536C14.4473 28.7598 14.5 28.6326 14.5 28.5V25.5C14.5 25.3674 14.4473 25.2402 14.3536 25.1464C14.2598 25.0527 14.1326 25 14 25C13.8674 25 13.7402 25.0527 13.6464 25.1464C13.5527 25.2402 13.5 25.3674 13.5 25.5V28.5C13.5 28.6326 13.5527 28.7598 13.6464 28.8536C13.7402 28.9473 13.8674 29 14 29Z" fill="#333333"/>
+                        <path d="M18 24C18.1326 24 18.2598 23.9473 18.3536 23.8536C18.4473 23.7598 18.5 23.6326 18.5 23.5V20.5C18.5 20.3674 18.4473 20.2402 18.3536 20.1464C18.2598 20.0527 18.1326 20 18 20C17.8674 20 17.7402 20.0527 17.6464 20.1464C17.5527 20.2402 17.5 20.3674 17.5 20.5V23.5C17.5 23.6326 17.5527 23.7598 17.6464 23.8536C17.7402 23.9473 17.8674 24 18 24Z" fill="#333333"/>
+                        <path d="M18 29C18.1326 29 18.2598 28.9473 18.3536 28.8536C18.4473 28.7598 18.5 28.6326 18.5 28.5V25.5C18.5 25.3674 18.4473 25.2402 18.3536 25.1464C18.2598 25.0527 18.1326 25 18 25C17.8674 25 17.7402 25.0527 17.6464 25.1464C17.5527 25.2402 17.5 25.3674 17.5 25.5V28.5C17.5 28.6326 17.5527 28.7598 17.6464 28.8536C17.7402 28.9473 17.8674 29 18 29Z" fill="#333333"/>
+                    </svg>
+                </span> 
+            </div>
+        </div>
+        <div class="prices_wrapper hide" data-type-of-food='Type2'>
+            <div class="row prices_products"data-type-of-food='page1'>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_16.png" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-info_name">Піцца ”Селянська”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>74грн</span> | <span class="weight">550грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_13.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Паста ”Italiano pronto”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>57грн</span> | <span class="weight">450грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+        
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_14.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Салат ”Мiкс зелені”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>53грн</span> | <span class="weight">200грам</span>
+                            </div>
+                            <p>Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_15.png" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-info_name">Суп гороховий з зеленню та сиром бакар </h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>46грн</span> | <span class="weight">330грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row prices_products hide" data-type-of-food='page2'>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_13.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Паста ”Italiano pronto”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>57грн</span> | <span class="weight">450грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+        
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_14.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Салат ”Мiкс зелені”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>53грн</span> | <span class="weight">200грам</span>
+                            </div>
+                            <p>Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_14.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Салат ”Мiкс зелені”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>53грн</span> | <span class="weight">200грам</span>
+                            </div>
+                            <p>Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prices_footer">
+                <div class="prices_footer-pagination">
+                    <button class="footer-pagination_prev btn btn-green" data-type-of-food='page1'>
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/>
+                        </svg>
+                    </button>
+                    <div class="pagination_info">
+                        <span class="pagination_current">1</span>
+                        <span class="pagination_last">2</span>
+                    </div>
+                    <button class="footer-pagination_next btn btn-green" data-type-of-food='page2'>
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/>
+                        </svg>
+                    </button>            
+                </div>
+                
+                <span class="go-to-cart btn">Перейти  до кошика
+                    <svg width="25" height="20" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 24C6.13261 24 6.25979 23.9473 6.35355 23.8536C6.44732 23.7598 6.5 23.6326 6.5 23.5V20.5C6.5 20.3674 6.44732 20.2402 6.35355 20.1464C6.25979 20.0527 6.13261 20 6 20C5.86739 20 5.74021 20.0527 5.64645 20.1464C5.55268 20.2402 5.5 20.3674 5.5 20.5V23.5C5.5 23.6326 5.55268 23.7598 5.64645 23.8536C5.74021 23.9473 5.86739 24 6 24Z" fill="#333333"/>
+                        <path d="M30.5 14.5H23.6293L18.8961 2.45185C18.7694 2.1301 18.5354 1.862 18.2338 1.6929C17.9321 1.52379 17.5813 1.46406 17.2407 1.52381C16.9001 1.58355 16.5906 1.75911 16.3645 2.02078C16.1384 2.28245 16.0097 2.61417 16 2.95985C15.991 2.61381 15.8625 2.28155 15.6364 2.01941C15.4104 1.75727 15.1006 1.58139 14.7597 1.52158C14.4187 1.46178 14.0676 1.52173 13.7658 1.69129C13.464 1.86084 13.2301 2.12955 13.1039 2.45185L8.37069 14.5H1.5C1.36739 14.5 1.24021 14.5527 1.14645 14.6465C1.05268 14.7403 1 14.8674 1 15V18C1.00012 18.121 1.04404 18.2377 1.12364 18.3287C1.20324 18.4197 1.31312 18.4788 1.43294 18.495L2.848 29.8152C2.96806 30.7757 3.82175 31.5 4.83388 31.5H27.1661C28.1782 31.5 29.0319 30.7757 29.152 29.8152L30.5671 18.495C30.6869 18.4788 30.7968 18.4197 30.8764 18.3287C30.956 18.2377 30.9999 18.121 31 18V15C31 14.8674 30.9473 14.7403 30.8536 14.6465C30.7598 14.5527 30.6326 14.5 30.5 14.5ZM17.0417 2.80053C17.0812 2.70991 17.1467 2.63305 17.2299 2.57965C17.3132 2.52626 17.4103 2.49873 17.5092 2.50055C17.608 2.50237 17.7041 2.53345 17.7853 2.58987C17.8665 2.64629 17.9291 2.72552 17.9653 2.81753L23.2826 16.3522L22.3518 16.7178L17.0347 3.18316C17.0105 3.1221 16.9986 3.05683 16.9998 2.99114C17.001 2.92546 17.0152 2.86067 17.0417 2.80053ZM21.5847 17.5H10.4153L11.201 15.5H20.799L21.5847 17.5ZM15.8961 3.54885C15.9592 3.3889 15.9943 3.21931 16 3.04747C16.0057 3.21931 16.0408 3.3889 16.1039 3.54885L20.4062 14.5H11.5938L15.8961 3.54885ZM14.0347 2.8176C14.058 2.75557 14.0935 2.69881 14.1389 2.6506C14.1844 2.6024 14.239 2.56371 14.2996 2.5368C14.3601 2.50988 14.4254 2.49527 14.4917 2.49382C14.558 2.49237 14.6238 2.5041 14.6855 2.52834C14.7472 2.55258 14.8034 2.58883 14.851 2.635C14.8985 2.68117 14.9364 2.73633 14.9624 2.79727C14.9885 2.85821 15.0021 2.92372 15.0026 2.98999C15.0031 3.05626 14.9904 3.12196 14.9653 3.18328L9.64819 16.7178L8.71744 16.3522L14.0347 2.8176ZM2 15.5H7.97781L7.60388 16.4519C7.55539 16.5753 7.55792 16.7129 7.61091 16.8345C7.6639 16.956 7.76301 17.0516 7.88644 17.1L8.9045 17.5H2V15.5ZM28.1597 29.6912C28.1021 30.1524 27.6749 30.5 27.1659 30.5H4.83388C4.32506 30.5 3.89794 30.1524 3.84013 29.6912L2.44138 18.5H29.5586L28.1597 29.6912ZM30 17.5H23.0955L24.1136 17.1C24.237 17.0516 24.3361 16.956 24.3891 16.8345C24.4421 16.7129 24.4446 16.5753 24.3961 16.4519L24.0222 15.5H30V17.5Z" fill="#333333"/>
+                        <path d="M6 29C6.13261 29 6.25979 28.9473 6.35355 28.8536C6.44732 28.7598 6.5 28.6326 6.5 28.5V25.5C6.5 25.3674 6.44732 25.2402 6.35355 25.1464C6.25979 25.0527 6.13261 25 6 25C5.86739 25 5.74021 25.0527 5.64645 25.1464C5.55268 25.2402 5.5 25.3674 5.5 25.5V28.5C5.5 28.6326 5.55268 28.7598 5.64645 28.8536C5.74021 28.9473 5.86739 29 6 29Z" fill="#333333"/>
+                        <path d="M8 24C8.13261 24 8.25979 23.9473 8.35355 23.8536C8.44732 23.7598 8.5 23.6326 8.5 23.5V20.5C8.5 20.3674 8.44732 20.2402 8.35355 20.1464C8.25979 20.0527 8.13261 20 8 20C7.86739 20 7.74021 20.0527 7.64645 20.1464C7.55268 20.2402 7.5 20.3674 7.5 20.5V23.5C7.5 23.6326 7.55268 23.7598 7.64645 23.8536C7.74021 23.9473 7.86739 24 8 24Z" fill="#333333"/>
+                        <path d="M8 29C8.13261 29 8.25979 28.9473 8.35355 28.8536C8.44732 28.7598 8.5 28.6326 8.5 28.5V25.5C8.5 25.3674 8.44732 25.2402 8.35355 25.1464C8.25979 25.0527 8.13261 25 8 25C7.86739 25 7.74021 25.0527 7.64645 25.1464C7.55268 25.2402 7.5 25.3674 7.5 25.5V28.5C7.5 28.6326 7.55268 28.7598 7.64645 28.8536C7.74021 28.9473 7.86739 29 8 29Z" fill="#333333"/>
+                        <path d="M10 24C10.1326 24 10.2598 23.9473 10.3536 23.8536C10.4473 23.7598 10.5 23.6326 10.5 23.5V20.5C10.5 20.3674 10.4473 20.2402 10.3536 20.1464C10.2598 20.0527 10.1326 20 10 20C9.86739 20 9.74021 20.0527 9.64645 20.1464C9.55268 20.2402 9.5 20.3674 9.5 20.5V23.5C9.5 23.6326 9.55268 23.7598 9.64645 23.8536C9.74021 23.9473 9.86739 24 10 24Z" fill="#333333"/>
+                        <path d="M10 29C10.1326 29 10.2598 28.9473 10.3536 28.8536C10.4473 28.7598 10.5 28.6326 10.5 28.5V25.5C10.5 25.3674 10.4473 25.2402 10.3536 25.1464C10.2598 25.0527 10.1326 25 10 25C9.86739 25 9.74021 25.0527 9.64645 25.1464C9.55268 25.2402 9.5 25.3674 9.5 25.5V28.5C9.5 28.6326 9.55268 28.7598 9.64645 28.8536C9.74021 28.9473 9.86739 29 10 29Z" fill="#333333"/>
+                        <path d="M12 24C12.1326 24 12.2598 23.9473 12.3536 23.8536C12.4473 23.7598 12.5 23.6326 12.5 23.5V20.5C12.5 20.3674 12.4473 20.2402 12.3536 20.1464C12.2598 20.0527 12.1326 20 12 20C11.8674 20 11.7402 20.0527 11.6464 20.1464C11.5527 20.2402 11.5 20.3674 11.5 20.5V23.5C11.5 23.6326 11.5527 23.7598 11.6464 23.8536C11.7402 23.9473 11.8674 24 12 24Z" fill="#333333"/>
+                        <path d="M12 29C12.1326 29 12.2598 28.9473 12.3536 28.8536C12.4473 28.7598 12.5 28.6326 12.5 28.5V25.5C12.5 25.3674 12.4473 25.2402 12.3536 25.1464C12.2598 25.0527 12.1326 25 12 25C11.8674 25 11.7402 25.0527 11.6464 25.1464C11.5527 25.2402 11.5 25.3674 11.5 25.5V28.5C11.5 28.6326 11.5527 28.7598 11.6464 28.8536C11.7402 28.9473 11.8674 29 12 29Z" fill="#333333"/>
+                        <path d="M20 24C20.1326 24 20.2598 23.9473 20.3536 23.8536C20.4473 23.7598 20.5 23.6326 20.5 23.5V20.5C20.5 20.3674 20.4473 20.2402 20.3536 20.1464C20.2598 20.0527 20.1326 20 20 20C19.8674 20 19.7402 20.0527 19.6464 20.1464C19.5527 20.2402 19.5 20.3674 19.5 20.5V23.5C19.5 23.6326 19.5527 23.7598 19.6464 23.8536C19.7402 23.9473 19.8674 24 20 24Z" fill="#333333"/>
+                        <path d="M20 29C20.1326 29 20.2598 28.9473 20.3536 28.8536C20.4473 28.7598 20.5 28.6326 20.5 28.5V25.5C20.5 25.3674 20.4473 25.2402 20.3536 25.1464C20.2598 25.0527 20.1326 25 20 25C19.8674 25 19.7402 25.0527 19.6464 25.1464C19.5527 25.2402 19.5 25.3674 19.5 25.5V28.5C19.5 28.6326 19.5527 28.7598 19.6464 28.8536C19.7402 28.9473 19.8674 29 20 29Z" fill="#333333"/>
+                        <path d="M22 24C22.1326 24 22.2598 23.9473 22.3536 23.8536C22.4473 23.7598 22.5 23.6326 22.5 23.5V20.5C22.5 20.3674 22.4473 20.2402 22.3536 20.1464C22.2598 20.0527 22.1326 20 22 20C21.8674 20 21.7402 20.0527 21.6464 20.1464C21.5527 20.2402 21.5 20.3674 21.5 20.5V23.5C21.5 23.6326 21.5527 23.7598 21.6464 23.8536C21.7402 23.9473 21.8674 24 22 24Z" fill="#333333"/>
+                        <path d="M22 29C22.1326 29 22.2598 28.9473 22.3536 28.8536C22.4473 28.7598 22.5 28.6326 22.5 28.5V25.5C22.5 25.3674 22.4473 25.2402 22.3536 25.1464C22.2598 25.0527 22.1326 25 22 25C21.8674 25 21.7402 25.0527 21.6464 25.1464C21.5527 25.2402 21.5 25.3674 21.5 25.5V28.5C21.5 28.6326 21.5527 28.7598 21.6464 28.8536C21.7402 28.9473 21.8674 29 22 29Z" fill="#333333"/>
+                        <path d="M24 24C24.1326 24 24.2598 23.9473 24.3536 23.8536C24.4473 23.7598 24.5 23.6326 24.5 23.5V20.5C24.5 20.3674 24.4473 20.2402 24.3536 20.1464C24.2598 20.0527 24.1326 20 24 20C23.8674 20 23.7402 20.0527 23.6464 20.1464C23.5527 20.2402 23.5 20.3674 23.5 20.5V23.5C23.5 23.6326 23.5527 23.7598 23.6464 23.8536C23.7402 23.9473 23.8674 24 24 24Z" fill="#333333"/>
+                        <path d="M24 29C24.1326 29 24.2598 28.9473 24.3536 28.8536C24.4473 28.7598 24.5 28.6326 24.5 28.5V25.5C24.5 25.3674 24.4473 25.2402 24.3536 25.1464C24.2598 25.0527 24.1326 25 24 25C23.8674 25 23.7402 25.0527 23.6464 25.1464C23.5527 25.2402 23.5 25.3674 23.5 25.5V28.5C23.5 28.6326 23.5527 28.7598 23.6464 28.8536C23.7402 28.9473 23.8674 29 24 29Z" fill="#333333"/>
+                        <path d="M26 24C26.1326 24 26.2598 23.9473 26.3536 23.8536C26.4473 23.7598 26.5 23.6326 26.5 23.5V20.5C26.5 20.3674 26.4473 20.2402 26.3536 20.1464C26.2598 20.0527 26.1326 20 26 20C25.8674 20 25.7402 20.0527 25.6464 20.1464C25.5527 20.2402 25.5 20.3674 25.5 20.5V23.5C25.5 23.6326 25.5527 23.7598 25.6464 23.8536C25.7402 23.9473 25.8674 24 26 24Z" fill="#333333"/>
+                        <path d="M26 29C26.1326 29 26.2598 28.9473 26.3536 28.8536C26.4473 28.7598 26.5 28.6326 26.5 28.5V25.5C26.5 25.3674 26.4473 25.2402 26.3536 25.1464C26.2598 25.0527 26.1326 25 26 25C25.8674 25 25.7402 25.0527 25.6464 25.1464C25.5527 25.2402 25.5 25.3674 25.5 25.5V28.5C25.5 28.6326 25.5527 28.7598 25.6464 28.8536C25.7402 28.9473 25.8674 29 26 29Z" fill="#333333"/>
+                        <path d="M16 24C16.1326 24 16.2598 23.9473 16.3536 23.8536C16.4473 23.7598 16.5 23.6326 16.5 23.5V20.5C16.5 20.3674 16.4473 20.2402 16.3536 20.1464C16.2598 20.0527 16.1326 20 16 20C15.8674 20 15.7402 20.0527 15.6464 20.1464C15.5527 20.2402 15.5 20.3674 15.5 20.5V23.5C15.5 23.6326 15.5527 23.7598 15.6464 23.8536C15.7402 23.9473 15.8674 24 16 24Z" fill="#333333"/>
+                        <path d="M16 29C16.1326 29 16.2598 28.9473 16.3536 28.8536C16.4473 28.7598 16.5 28.6326 16.5 28.5V25.5C16.5 25.3674 16.4473 25.2402 16.3536 25.1464C16.2598 25.0527 16.1326 25 16 25C15.8674 25 15.7402 25.0527 15.6464 25.1464C15.5527 25.2402 15.5 25.3674 15.5 25.5V28.5C15.5 28.6326 15.5527 28.7598 15.6464 28.8536C15.7402 28.9473 15.8674 29 16 29Z" fill="#333333"/>
+                        <path d="M14 24C14.1326 24 14.2598 23.9473 14.3536 23.8536C14.4473 23.7598 14.5 23.6326 14.5 23.5V20.5C14.5 20.3674 14.4473 20.2402 14.3536 20.1464C14.2598 20.0527 14.1326 20 14 20C13.8674 20 13.7402 20.0527 13.6464 20.1464C13.5527 20.2402 13.5 20.3674 13.5 20.5V23.5C13.5 23.6326 13.5527 23.7598 13.6464 23.8536C13.7402 23.9473 13.8674 24 14 24Z" fill="#333333"/>
+                        <path d="M14 29C14.1326 29 14.2598 28.9473 14.3536 28.8536C14.4473 28.7598 14.5 28.6326 14.5 28.5V25.5C14.5 25.3674 14.4473 25.2402 14.3536 25.1464C14.2598 25.0527 14.1326 25 14 25C13.8674 25 13.7402 25.0527 13.6464 25.1464C13.5527 25.2402 13.5 25.3674 13.5 25.5V28.5C13.5 28.6326 13.5527 28.7598 13.6464 28.8536C13.7402 28.9473 13.8674 29 14 29Z" fill="#333333"/>
+                        <path d="M18 24C18.1326 24 18.2598 23.9473 18.3536 23.8536C18.4473 23.7598 18.5 23.6326 18.5 23.5V20.5C18.5 20.3674 18.4473 20.2402 18.3536 20.1464C18.2598 20.0527 18.1326 20 18 20C17.8674 20 17.7402 20.0527 17.6464 20.1464C17.5527 20.2402 17.5 20.3674 17.5 20.5V23.5C17.5 23.6326 17.5527 23.7598 17.6464 23.8536C17.7402 23.9473 17.8674 24 18 24Z" fill="#333333"/>
+                        <path d="M18 29C18.1326 29 18.2598 28.9473 18.3536 28.8536C18.4473 28.7598 18.5 28.6326 18.5 28.5V25.5C18.5 25.3674 18.4473 25.2402 18.3536 25.1464C18.2598 25.0527 18.1326 25 18 25C17.8674 25 17.7402 25.0527 17.6464 25.1464C17.5527 25.2402 17.5 25.3674 17.5 25.5V28.5C17.5 28.6326 17.5527 28.7598 17.6464 28.8536C17.7402 28.9473 17.8674 29 18 29Z" fill="#333333"/>
+                    </svg>
+                </span> 
+            </div>
+        </div>
+        <div class="prices_wrapper hide" data-type-of-food='Type3'>
+            <div class="row prices_products" data-type-of-food='page1'>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_15.png" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-info_name">Суп гороховий з зеленню та сиром бакар </h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>46грн</span> | <span class="weight">330грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_13.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Паста ”Italiano pronto”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>57грн</span> | <span class="weight">450грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+        
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_14.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Салат ”Мiкс зелені”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>53грн</span> | <span class="weight">200грам</span>
+                            </div>
+                            <p>Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_16.png" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-info_name">Піцца ”Селянська”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>74грн</span> | <span class="weight">550грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row prices_products hide" data-type-of-food='page2'>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_13.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Паста ”Italiano pronto”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>57грн</span> | <span class="weight">450грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+        
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="prices_footer">
+                <div class="prices_footer-pagination">
+                    <button class="footer-pagination_prev btn btn-green" data-type-of-food='page1'>
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/>
+                        </svg>
+                    </button>
+                    <div class="pagination_info">
+                        <span class="pagination_current">1</span>
+                        <span class="pagination_last">2</span>
+                    </div>
+                    <button class="footer-pagination_next btn btn-green" data-type-of-food='page2'>
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/>
+                        </svg>
+                    </button>            
+                </div>
+                
+                <span class="go-to-cart btn">Перейти  до кошика
+                    <svg width="25" height="20" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 24C6.13261 24 6.25979 23.9473 6.35355 23.8536C6.44732 23.7598 6.5 23.6326 6.5 23.5V20.5C6.5 20.3674 6.44732 20.2402 6.35355 20.1464C6.25979 20.0527 6.13261 20 6 20C5.86739 20 5.74021 20.0527 5.64645 20.1464C5.55268 20.2402 5.5 20.3674 5.5 20.5V23.5C5.5 23.6326 5.55268 23.7598 5.64645 23.8536C5.74021 23.9473 5.86739 24 6 24Z" fill="#333333"/>
+                        <path d="M30.5 14.5H23.6293L18.8961 2.45185C18.7694 2.1301 18.5354 1.862 18.2338 1.6929C17.9321 1.52379 17.5813 1.46406 17.2407 1.52381C16.9001 1.58355 16.5906 1.75911 16.3645 2.02078C16.1384 2.28245 16.0097 2.61417 16 2.95985C15.991 2.61381 15.8625 2.28155 15.6364 2.01941C15.4104 1.75727 15.1006 1.58139 14.7597 1.52158C14.4187 1.46178 14.0676 1.52173 13.7658 1.69129C13.464 1.86084 13.2301 2.12955 13.1039 2.45185L8.37069 14.5H1.5C1.36739 14.5 1.24021 14.5527 1.14645 14.6465C1.05268 14.7403 1 14.8674 1 15V18C1.00012 18.121 1.04404 18.2377 1.12364 18.3287C1.20324 18.4197 1.31312 18.4788 1.43294 18.495L2.848 29.8152C2.96806 30.7757 3.82175 31.5 4.83388 31.5H27.1661C28.1782 31.5 29.0319 30.7757 29.152 29.8152L30.5671 18.495C30.6869 18.4788 30.7968 18.4197 30.8764 18.3287C30.956 18.2377 30.9999 18.121 31 18V15C31 14.8674 30.9473 14.7403 30.8536 14.6465C30.7598 14.5527 30.6326 14.5 30.5 14.5ZM17.0417 2.80053C17.0812 2.70991 17.1467 2.63305 17.2299 2.57965C17.3132 2.52626 17.4103 2.49873 17.5092 2.50055C17.608 2.50237 17.7041 2.53345 17.7853 2.58987C17.8665 2.64629 17.9291 2.72552 17.9653 2.81753L23.2826 16.3522L22.3518 16.7178L17.0347 3.18316C17.0105 3.1221 16.9986 3.05683 16.9998 2.99114C17.001 2.92546 17.0152 2.86067 17.0417 2.80053ZM21.5847 17.5H10.4153L11.201 15.5H20.799L21.5847 17.5ZM15.8961 3.54885C15.9592 3.3889 15.9943 3.21931 16 3.04747C16.0057 3.21931 16.0408 3.3889 16.1039 3.54885L20.4062 14.5H11.5938L15.8961 3.54885ZM14.0347 2.8176C14.058 2.75557 14.0935 2.69881 14.1389 2.6506C14.1844 2.6024 14.239 2.56371 14.2996 2.5368C14.3601 2.50988 14.4254 2.49527 14.4917 2.49382C14.558 2.49237 14.6238 2.5041 14.6855 2.52834C14.7472 2.55258 14.8034 2.58883 14.851 2.635C14.8985 2.68117 14.9364 2.73633 14.9624 2.79727C14.9885 2.85821 15.0021 2.92372 15.0026 2.98999C15.0031 3.05626 14.9904 3.12196 14.9653 3.18328L9.64819 16.7178L8.71744 16.3522L14.0347 2.8176ZM2 15.5H7.97781L7.60388 16.4519C7.55539 16.5753 7.55792 16.7129 7.61091 16.8345C7.6639 16.956 7.76301 17.0516 7.88644 17.1L8.9045 17.5H2V15.5ZM28.1597 29.6912C28.1021 30.1524 27.6749 30.5 27.1659 30.5H4.83388C4.32506 30.5 3.89794 30.1524 3.84013 29.6912L2.44138 18.5H29.5586L28.1597 29.6912ZM30 17.5H23.0955L24.1136 17.1C24.237 17.0516 24.3361 16.956 24.3891 16.8345C24.4421 16.7129 24.4446 16.5753 24.3961 16.4519L24.0222 15.5H30V17.5Z" fill="#333333"/>
+                        <path d="M6 29C6.13261 29 6.25979 28.9473 6.35355 28.8536C6.44732 28.7598 6.5 28.6326 6.5 28.5V25.5C6.5 25.3674 6.44732 25.2402 6.35355 25.1464C6.25979 25.0527 6.13261 25 6 25C5.86739 25 5.74021 25.0527 5.64645 25.1464C5.55268 25.2402 5.5 25.3674 5.5 25.5V28.5C5.5 28.6326 5.55268 28.7598 5.64645 28.8536C5.74021 28.9473 5.86739 29 6 29Z" fill="#333333"/>
+                        <path d="M8 24C8.13261 24 8.25979 23.9473 8.35355 23.8536C8.44732 23.7598 8.5 23.6326 8.5 23.5V20.5C8.5 20.3674 8.44732 20.2402 8.35355 20.1464C8.25979 20.0527 8.13261 20 8 20C7.86739 20 7.74021 20.0527 7.64645 20.1464C7.55268 20.2402 7.5 20.3674 7.5 20.5V23.5C7.5 23.6326 7.55268 23.7598 7.64645 23.8536C7.74021 23.9473 7.86739 24 8 24Z" fill="#333333"/>
+                        <path d="M8 29C8.13261 29 8.25979 28.9473 8.35355 28.8536C8.44732 28.7598 8.5 28.6326 8.5 28.5V25.5C8.5 25.3674 8.44732 25.2402 8.35355 25.1464C8.25979 25.0527 8.13261 25 8 25C7.86739 25 7.74021 25.0527 7.64645 25.1464C7.55268 25.2402 7.5 25.3674 7.5 25.5V28.5C7.5 28.6326 7.55268 28.7598 7.64645 28.8536C7.74021 28.9473 7.86739 29 8 29Z" fill="#333333"/>
+                        <path d="M10 24C10.1326 24 10.2598 23.9473 10.3536 23.8536C10.4473 23.7598 10.5 23.6326 10.5 23.5V20.5C10.5 20.3674 10.4473 20.2402 10.3536 20.1464C10.2598 20.0527 10.1326 20 10 20C9.86739 20 9.74021 20.0527 9.64645 20.1464C9.55268 20.2402 9.5 20.3674 9.5 20.5V23.5C9.5 23.6326 9.55268 23.7598 9.64645 23.8536C9.74021 23.9473 9.86739 24 10 24Z" fill="#333333"/>
+                        <path d="M10 29C10.1326 29 10.2598 28.9473 10.3536 28.8536C10.4473 28.7598 10.5 28.6326 10.5 28.5V25.5C10.5 25.3674 10.4473 25.2402 10.3536 25.1464C10.2598 25.0527 10.1326 25 10 25C9.86739 25 9.74021 25.0527 9.64645 25.1464C9.55268 25.2402 9.5 25.3674 9.5 25.5V28.5C9.5 28.6326 9.55268 28.7598 9.64645 28.8536C9.74021 28.9473 9.86739 29 10 29Z" fill="#333333"/>
+                        <path d="M12 24C12.1326 24 12.2598 23.9473 12.3536 23.8536C12.4473 23.7598 12.5 23.6326 12.5 23.5V20.5C12.5 20.3674 12.4473 20.2402 12.3536 20.1464C12.2598 20.0527 12.1326 20 12 20C11.8674 20 11.7402 20.0527 11.6464 20.1464C11.5527 20.2402 11.5 20.3674 11.5 20.5V23.5C11.5 23.6326 11.5527 23.7598 11.6464 23.8536C11.7402 23.9473 11.8674 24 12 24Z" fill="#333333"/>
+                        <path d="M12 29C12.1326 29 12.2598 28.9473 12.3536 28.8536C12.4473 28.7598 12.5 28.6326 12.5 28.5V25.5C12.5 25.3674 12.4473 25.2402 12.3536 25.1464C12.2598 25.0527 12.1326 25 12 25C11.8674 25 11.7402 25.0527 11.6464 25.1464C11.5527 25.2402 11.5 25.3674 11.5 25.5V28.5C11.5 28.6326 11.5527 28.7598 11.6464 28.8536C11.7402 28.9473 11.8674 29 12 29Z" fill="#333333"/>
+                        <path d="M20 24C20.1326 24 20.2598 23.9473 20.3536 23.8536C20.4473 23.7598 20.5 23.6326 20.5 23.5V20.5C20.5 20.3674 20.4473 20.2402 20.3536 20.1464C20.2598 20.0527 20.1326 20 20 20C19.8674 20 19.7402 20.0527 19.6464 20.1464C19.5527 20.2402 19.5 20.3674 19.5 20.5V23.5C19.5 23.6326 19.5527 23.7598 19.6464 23.8536C19.7402 23.9473 19.8674 24 20 24Z" fill="#333333"/>
+                        <path d="M20 29C20.1326 29 20.2598 28.9473 20.3536 28.8536C20.4473 28.7598 20.5 28.6326 20.5 28.5V25.5C20.5 25.3674 20.4473 25.2402 20.3536 25.1464C20.2598 25.0527 20.1326 25 20 25C19.8674 25 19.7402 25.0527 19.6464 25.1464C19.5527 25.2402 19.5 25.3674 19.5 25.5V28.5C19.5 28.6326 19.5527 28.7598 19.6464 28.8536C19.7402 28.9473 19.8674 29 20 29Z" fill="#333333"/>
+                        <path d="M22 24C22.1326 24 22.2598 23.9473 22.3536 23.8536C22.4473 23.7598 22.5 23.6326 22.5 23.5V20.5C22.5 20.3674 22.4473 20.2402 22.3536 20.1464C22.2598 20.0527 22.1326 20 22 20C21.8674 20 21.7402 20.0527 21.6464 20.1464C21.5527 20.2402 21.5 20.3674 21.5 20.5V23.5C21.5 23.6326 21.5527 23.7598 21.6464 23.8536C21.7402 23.9473 21.8674 24 22 24Z" fill="#333333"/>
+                        <path d="M22 29C22.1326 29 22.2598 28.9473 22.3536 28.8536C22.4473 28.7598 22.5 28.6326 22.5 28.5V25.5C22.5 25.3674 22.4473 25.2402 22.3536 25.1464C22.2598 25.0527 22.1326 25 22 25C21.8674 25 21.7402 25.0527 21.6464 25.1464C21.5527 25.2402 21.5 25.3674 21.5 25.5V28.5C21.5 28.6326 21.5527 28.7598 21.6464 28.8536C21.7402 28.9473 21.8674 29 22 29Z" fill="#333333"/>
+                        <path d="M24 24C24.1326 24 24.2598 23.9473 24.3536 23.8536C24.4473 23.7598 24.5 23.6326 24.5 23.5V20.5C24.5 20.3674 24.4473 20.2402 24.3536 20.1464C24.2598 20.0527 24.1326 20 24 20C23.8674 20 23.7402 20.0527 23.6464 20.1464C23.5527 20.2402 23.5 20.3674 23.5 20.5V23.5C23.5 23.6326 23.5527 23.7598 23.6464 23.8536C23.7402 23.9473 23.8674 24 24 24Z" fill="#333333"/>
+                        <path d="M24 29C24.1326 29 24.2598 28.9473 24.3536 28.8536C24.4473 28.7598 24.5 28.6326 24.5 28.5V25.5C24.5 25.3674 24.4473 25.2402 24.3536 25.1464C24.2598 25.0527 24.1326 25 24 25C23.8674 25 23.7402 25.0527 23.6464 25.1464C23.5527 25.2402 23.5 25.3674 23.5 25.5V28.5C23.5 28.6326 23.5527 28.7598 23.6464 28.8536C23.7402 28.9473 23.8674 29 24 29Z" fill="#333333"/>
+                        <path d="M26 24C26.1326 24 26.2598 23.9473 26.3536 23.8536C26.4473 23.7598 26.5 23.6326 26.5 23.5V20.5C26.5 20.3674 26.4473 20.2402 26.3536 20.1464C26.2598 20.0527 26.1326 20 26 20C25.8674 20 25.7402 20.0527 25.6464 20.1464C25.5527 20.2402 25.5 20.3674 25.5 20.5V23.5C25.5 23.6326 25.5527 23.7598 25.6464 23.8536C25.7402 23.9473 25.8674 24 26 24Z" fill="#333333"/>
+                        <path d="M26 29C26.1326 29 26.2598 28.9473 26.3536 28.8536C26.4473 28.7598 26.5 28.6326 26.5 28.5V25.5C26.5 25.3674 26.4473 25.2402 26.3536 25.1464C26.2598 25.0527 26.1326 25 26 25C25.8674 25 25.7402 25.0527 25.6464 25.1464C25.5527 25.2402 25.5 25.3674 25.5 25.5V28.5C25.5 28.6326 25.5527 28.7598 25.6464 28.8536C25.7402 28.9473 25.8674 29 26 29Z" fill="#333333"/>
+                        <path d="M16 24C16.1326 24 16.2598 23.9473 16.3536 23.8536C16.4473 23.7598 16.5 23.6326 16.5 23.5V20.5C16.5 20.3674 16.4473 20.2402 16.3536 20.1464C16.2598 20.0527 16.1326 20 16 20C15.8674 20 15.7402 20.0527 15.6464 20.1464C15.5527 20.2402 15.5 20.3674 15.5 20.5V23.5C15.5 23.6326 15.5527 23.7598 15.6464 23.8536C15.7402 23.9473 15.8674 24 16 24Z" fill="#333333"/>
+                        <path d="M16 29C16.1326 29 16.2598 28.9473 16.3536 28.8536C16.4473 28.7598 16.5 28.6326 16.5 28.5V25.5C16.5 25.3674 16.4473 25.2402 16.3536 25.1464C16.2598 25.0527 16.1326 25 16 25C15.8674 25 15.7402 25.0527 15.6464 25.1464C15.5527 25.2402 15.5 25.3674 15.5 25.5V28.5C15.5 28.6326 15.5527 28.7598 15.6464 28.8536C15.7402 28.9473 15.8674 29 16 29Z" fill="#333333"/>
+                        <path d="M14 24C14.1326 24 14.2598 23.9473 14.3536 23.8536C14.4473 23.7598 14.5 23.6326 14.5 23.5V20.5C14.5 20.3674 14.4473 20.2402 14.3536 20.1464C14.2598 20.0527 14.1326 20 14 20C13.8674 20 13.7402 20.0527 13.6464 20.1464C13.5527 20.2402 13.5 20.3674 13.5 20.5V23.5C13.5 23.6326 13.5527 23.7598 13.6464 23.8536C13.7402 23.9473 13.8674 24 14 24Z" fill="#333333"/>
+                        <path d="M14 29C14.1326 29 14.2598 28.9473 14.3536 28.8536C14.4473 28.7598 14.5 28.6326 14.5 28.5V25.5C14.5 25.3674 14.4473 25.2402 14.3536 25.1464C14.2598 25.0527 14.1326 25 14 25C13.8674 25 13.7402 25.0527 13.6464 25.1464C13.5527 25.2402 13.5 25.3674 13.5 25.5V28.5C13.5 28.6326 13.5527 28.7598 13.6464 28.8536C13.7402 28.9473 13.8674 29 14 29Z" fill="#333333"/>
+                        <path d="M18 24C18.1326 24 18.2598 23.9473 18.3536 23.8536C18.4473 23.7598 18.5 23.6326 18.5 23.5V20.5C18.5 20.3674 18.4473 20.2402 18.3536 20.1464C18.2598 20.0527 18.1326 20 18 20C17.8674 20 17.7402 20.0527 17.6464 20.1464C17.5527 20.2402 17.5 20.3674 17.5 20.5V23.5C17.5 23.6326 17.5527 23.7598 17.6464 23.8536C17.7402 23.9473 17.8674 24 18 24Z" fill="#333333"/>
+                        <path d="M18 29C18.1326 29 18.2598 28.9473 18.3536 28.8536C18.4473 28.7598 18.5 28.6326 18.5 28.5V25.5C18.5 25.3674 18.4473 25.2402 18.3536 25.1464C18.2598 25.0527 18.1326 25 18 25C17.8674 25 17.7402 25.0527 17.6464 25.1464C17.5527 25.2402 17.5 25.3674 17.5 25.5V28.5C17.5 28.6326 17.5527 28.7598 17.6464 28.8536C17.7402 28.9473 17.8674 29 18 29Z" fill="#333333"/>
+                    </svg>
+                </span> 
+            </div>
+        </div>
+        <div class="prices_wrapper hide" data-type-of-food='Type4'>
+            <div class="row prices_products" data-type-of-food='page1'>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_14.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Салат ”Мiкс зелені”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>53грн</span> | <span class="weight">200грам</span>
+                            </div>
+                            <p>Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_13.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Паста ”Italiano pronto”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>57грн</span> | <span class="weight">450грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+        
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_15.png" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-info_name">Суп гороховий з зеленню та сиром бакар </h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>46грн</span> | <span class="weight">330грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_16.png" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-info_name">Піцца ”Селянська”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>74грн</span> | <span class="weight">550грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row prices_products hide" data-type-of-food='page2'>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_14.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Салат ”Мiкс зелені”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>53грн</span> | <span class="weight">200грам</span>
+                            </div>
+                            <p>Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_16.png" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-info_name">Піцца ”Селянська”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>74грн</span> | <span class="weight">550грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_13.png" alt="">
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-info_name">Паста ”Italiano pronto”</h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>57грн</span> | <span class="weight">450грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
+        
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-xl-6 product">
+                    <div class="product-img">
+                        <img src="img/food/Rectangle_15.png" alt="">
+                    </div>
+                    <div class="product-info">
+                        <h1 class="product-info_name">Суп гороховий з зеленню та сиром бакар </h1>
+                        <div class="product-info_desc">
+                            <div class="price">
+                                <span>46грн</span> | <span class="weight">330грам</span>
+                            </div>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
+                            <div class="product-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prices_footer">
+                <div class="prices_footer-pagination">
+                    <button class="footer-pagination_prev btn btn-green" data-type-of-food='page1'>
+                        <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/>
+                        </svg>
+                    </button>
+                    <div class="pagination_info">
+                        <span class="pagination_current">1</span>
+                        <span class="pagination_last">2</span>
+                    </div>
+                    <button class="footer-pagination_next btn btn-green" data-type-of-food='page2'>
                         <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/>
                         </svg>
@@ -413,28 +1274,23 @@
                 </div>
                 <input class="btn input-name" type="text" placeholder="Ім'я">
                 <input class="btn input-phone" type="text" placeholder="+380 -- -- -- ---">
-                <button class="btn go-to-cart btn-green booking-submit">ЗАБРОНЮВАТИ <i class="hide form-sent_icon-btn"><svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <input type="submit" value="ЗАБРОНЮВАТИ" class="btn go-to-cart btn-green booking-submit"><i class="hide form-sent_icon-btn"><svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 7.58537L8.625 16L24 1" stroke="black"/>
-                    </svg></i></button>
+                    </svg></i>
             </form>
             <div class="hide error">
                 <span class="error_icon">!</span>
                 <span class="error_text">Нажаль Вашу заявку не прийнято. Коректно введіть ім'я (до 50 символів) та номер телефону</span>
             </div>
-            <div class="hide form-sent">
-                <span class="form-sent_icon">!</span>
-                <span class="form-sent_text">В найблищий час з вами зав’яжеться наш менеджер для підтвердження резервації</span>
+            <div class="hide form-send">
+                <span class="form-send_icon">!</span>
+                <span class="form-send_text">В найблищий час з вами зав’яжеться наш менеджер для підтвердження резервації</span>
             </div>
         </div>
     </section>
     <section class="novelty">
         <div class="novelty-wrapper">
             <span class="novelty_title fixed-novelty">Новинки</span>
-            <button class="footer-pagination_prev btn btn-green">
-                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/>
-                </svg>
-            </button>
             <div class="novelty_items" >
                 <div class="novelty-item">
                     <div class="novelty-item_img" style="background-image: url('img/Novelty/Rectangle_16.png');"></div>
@@ -468,22 +1324,44 @@
                         </div>
                     </div>
                 </div>
+                <div class="novelty-item">
+                    <div class="novelty-item_img" style="background-image: url('img/Novelty/Rectangle_16.png');"></div>
+                    <div class="product-info novelty-info">        
+                        <div class="product-info_desc">
+                            <div class="novelty-info_desc">
+                                <h1 class="product-info_name">Фруктовий мікс</h1>
+                                <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
+                                <div class="price">
+                                    <span>56грн</span> | <span class="weight">500грам</span>
+                                </div>
+                            </div>
+                            <div class="product-info_add novelty-info_add">
+                                <button class="add-product btn">Додати до кошика</button>
+                                <label for="product-quantity1">Кількість: </label>
+                                <div class="quantity__holder">
+                                    
+                                    <div class="holder__button-plus btn">
+                                        +
+                                    </div>
+                                    <div class="holder__content">
+                                        <span>1</span>
+                                        <span>шт.</span>
+                                    </div>
+                                    <div class="holder__button-minus btn">
+                                        -
+                                    </div>
+                                    
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button class="footer-pagination_next btn btn-green">
-                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/>
-                </svg>
-            </button>
         </div>
     </section>
     <section class="share">
         <div class="share-wrapper">
             <span class="share_title fixed-share">Акції</span>
-            <button class="footer-pagination_prev btn btn-green">
-                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/>
-                </svg>
-            </button>
             <div class="share-items">
                 <div class="share-item">
                 <div class="share_img" style="background-image: url('img/share/Rectangle_15.png');"></div>
@@ -517,6 +1395,37 @@
                 </div>
 
                 <div class="share-item">
+                    <div class="share_img" style="background-image: url('img/share/Rectangle_15.png');"></div>
+                    <div class="product-info share-info">        
+                        <div class="share-info_desc">
+                            <h1 class="product-info_name">Фірмовий сніданок</h1>
+                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
+                            <div class="price">
+                                <span class="price_no-active">54</span> <span class="price_active">44грн</span> | <span class="weight">400грам</span>
+                            </div>
+                        </div>
+                        <div class="product-info_add share-info_add">
+                            <button class="add-product btn">Додати до кошика</button>
+                            <label for="product-quantity1">Кількість: </label>
+                            <div class="quantity__holder">
+                                
+                                <div class="holder__button-plus btn">
+                                    +
+                                </div>
+                                <div class="holder__content">
+                                    <span>1</span>
+                                    <span>шт.</span>
+                                </div>
+                                <div class="holder__button-minus btn">
+                                    -
+                                </div>
+                                
+                            </div>    
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="share-item">
                 <div class="share_img" style="background-image: url('img/share/Rectangle_17.png');"></div>
                 <div class="product-info share-info">        
                     <div class="share-info_desc">
@@ -547,20 +1456,10 @@
                 </div>
                 </div>
             </div>
-            <button class="footer-pagination_next btn btn-green">
-                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/>
-                </svg>
-            </button>
         </div>
     </section>
     <footer class="footer">
         <div class="comments">
-            <button class="footer-pagination_prev btn btn-green">
-                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/>
-                </svg>
-            </button>
             <div class="comments_items">
                 <div class="comment_item">
                     <div class="comment_img" style="background-image: url('img/comments/Rectangle_26.png');"></div>
@@ -586,12 +1485,19 @@
                         <p class="text">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
                     </div>
                 </div>
+                <div class="comment_item">
+                    <div class="comment_img" style="background-image: url('img/comments/Rectangle_26.png');"></div>
+                    <div class="comment_info">
+                        <span class="comment_name">Іванка</span>
+                        <div class="rate">
+                            <span class="rate_user">4.5</span>
+                            <span>/</span>
+                            <span>5</span>
+                        </div>
+                        <p class="text">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
+                    </div>
+                </div>
             </div>
-            <button class="footer-pagination_next btn btn-green">
-                <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/>
-                </svg>
-            </button>
         </div>
         <div class="company-info" id="company-info">
             <div class="company-info_wrapper">
@@ -664,6 +1570,10 @@
             <p class="footer-wrapper_text">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення літер на відміну від, наприклад</p>
         </div>
     </footer>
-    <script src="/mine.js"></script>
+    
+    <script src="jQuery.js"></script>
+    <script src="mine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
 </body>
 </html>
