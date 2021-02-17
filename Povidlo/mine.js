@@ -51,10 +51,14 @@ $(document).ready(function(){
         $(`.wrap[data-type-img = ${imgAtr}]`).removeClass('hide');
     });
 
-    // $(window).on("resize", slideGallery());
-    slickS();
-    // slideGallery();
-    // function slideGallery(){
+    slickGallery();
+    slickNovelty();
+    slickShare();
+    slickComments();
+    
+});
+
+function slickGallery(){
     $('.wrap').not('.slick-initialized').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -66,9 +70,7 @@ $(document).ready(function(){
             {
               breakpoint: 768,
               settings: {
-                rows: 2,
-                slidesPerRow: 2,
-                slidesToShow: 4,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 arrows: true,
                 infinite: false
@@ -76,41 +78,56 @@ $(document).ready(function(){
             }
         ]
     });
-    
-// };
-});
+}
 
+function slickShare(){
+    $('.share-items').slick({
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: '<button class="footer-pagination_prev btn btn-green"><svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/></svg></button>',
 
+        nextArrow: '<button class="footer-pagination_next btn btn-green"><svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/></svg></button>',
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false,
+                arrows: false
+              }
+            }
+        ]  
+    });
+}
 
-// function slideGallery(){
-//     if(window.innerWidth >= 768) {  
-//         $('.wrap').not('.slick-initialized').slick({
-//             slidesToShow: 4,
-//             slidesToScroll: 1,
-//             infinite: false,
-//             arrows: true,
-//             prevArrow: '<div class="arrow-left"><svg class="left" width="42" height="132" viewBox="0 0 42 132" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="42" height="132" transform="translate(42 132) rotate(180)" fill="white"/><path d="M25 74L17 66L25 58" stroke="#333333"/></svg></div>',
-//             nextArrow: '<div class="arrow-right"><svg class="right" width="42" height="132" viewBox="0 0 42 132" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="42" height="132" fill="white"/><path d="M17 58L25 66L17 74" stroke="#333333"/></svg></div>',
-//         });
-//     }else{
-//         $('.wrap').not('.slick-initialized').slick({
-//             rows: 2,
-//             slidesPerRow: 1,
-//             slidesToShow: 2,
-//             slidesToScroll: 1,
-//             arrows: true,
-//             infinite: false,
-//             dots: false,
-//             prevArrow: '<div class="arrow-left"><svg class="left" width="42" height="132" viewBox="0 0 42 132" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="42" height="132" transform="translate(42 132) rotate(180)" fill="white"/><path d="M25 74L17 66L25 58" stroke="#333333"/></svg></div>',
-//             nextArrow: '<div class="arrow-right"><svg class="right" width="42" height="132" viewBox="0 0 42 132" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="42" height="132" fill="white"/><path d="M17 58L25 66L17 74" stroke="#333333"/></svg></div>',
-//         });
-//     } 
-// };
+function slickComments(){
+    $('.comments_items').slick({
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: '<button class="footer-pagination_prev btn btn-green"><svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/></svg></button>',
 
+        nextArrow: '<button class="footer-pagination_next btn btn-green"><svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/></svg></button>',
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                infinite: false,
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
+    });
+}
 
-function slickS(){
+function slickNovelty(){
     $('.novelty_items').slick({
-        infinite: true,
+        infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
@@ -121,47 +138,8 @@ function slickS(){
             {
               breakpoint: 768,
               settings: {
+                infinite: false,
                 arrows: false
-              }
-            }
-        ]
-    });
-
-    $('.share-items').slick({
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: true,
-        prevArrow: '<button class="footer-pagination_prev btn btn-green"><svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/></svg></button>',
-
-        nextArrow: '<button class="footer-pagination_next btn btn-green"><svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/></svg></button>',
-        responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                arrows: false
-              }
-            }
-        ]  
-    });
-
-    $('.comments_items').slick({
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        arrows: true,
-        prevArrow: '<button class="footer-pagination_prev btn btn-green"><svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/></svg></button>',
-
-        nextArrow: '<button class="footer-pagination_next btn btn-green"><svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/></svg></button>',
-        responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
               }
             }
         ]
