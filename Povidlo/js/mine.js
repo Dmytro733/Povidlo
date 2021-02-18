@@ -34,7 +34,6 @@ $(document).ready(function(){
 
     $('.prices_footer .footer-pagination_next').click(function(){
         let foodAtr = $(this).attr('data-type-of-food');
-        console.log(foodAtr);
         $('.prices_products').addClass('hide');
         $(`.prices_products[data-type-of-food = ${foodAtr}]`).removeClass('hide');
     });
@@ -49,14 +48,30 @@ $(document).ready(function(){
         let imgAtr = $(this).attr('data-type-img');
         $('.wrap').addClass('hide');
         $(`.wrap[data-type-img = ${imgAtr}]`).removeClass('hide');
+
     });
 
+    
     slickGallery();
     slickNovelty();
     slickShare();
     slickComments();
+    priceShow();
+    sliderShow();
     
 });
+
+function priceShow(){
+    let foodAtr = $('.prices_menu-items .item').attr('data-type-of-food');
+    $('.prices_wrapper').addClass('hide');
+    $(`.prices_wrapper[data-type-of-food = ${foodAtr}]`).removeClass('hide');
+}
+
+function sliderShow(){
+    let imgAtr = $('.slider_menu-items .item').attr('data-type-img');
+    $('.wrap').addClass('hide');
+    $(`.wrap[data-type-img = ${imgAtr}]`).removeClass('hide');
+}
 
 function slickGallery(){
     $('.wrap').not('.slick-initialized').slick({

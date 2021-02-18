@@ -168,8 +168,8 @@ p{
     position: absolute;
     -ms-flex-item-align: start;
         align-self: flex-start;
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     background-color: #FF033F;
     color: #fff;
@@ -288,6 +288,7 @@ p{
 
 .slick-list{
     width: 100%;
+    display: flex;
 }
 
 .slick-track{
@@ -1670,6 +1671,7 @@ textarea{
             -ms-transform: translateY(0%);
                 transform: translateY(0%);
     }
+    
 
     .opacity-style{
         opacity: 0;
@@ -2368,3 +2370,4 @@ textarea{
         font-size: 30px;
     }
 }
+    
