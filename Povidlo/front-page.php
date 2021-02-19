@@ -8,13 +8,22 @@
  * @package Povidlo
  */
 
-$array = get_field("slider");
-$categories = get_categories( [
-	'taxonomy'     => 'category-foods'
-]);
+    $array = get_field("slider");
 
-get_header();
+    $categories = get_categories( [
+    	'taxonomy'     => 'category-foods'
+    ]);
+
+    $novelty_post = new WP_Query( [ 
+        'post_type' => 'novelty',
+    ]);
+
+    $share_post = new WP_Query( [ 
+        'post_type' => 'share',
+    ]);
 ?>
+
+<?php get_header(); ?>
 
     <section class="information">
         <div class="information_wrapper">
@@ -121,21 +130,21 @@ get_header();
                 ?>
                 <div class="prices_wrapper" data-type-of-food=<?php echo $cat->term_id; ?>> 
                     
-                    <?php foreach( array_chunk($foods_query->posts, 4)  as $row ): ?>
-                        <div class="row prices_products">
-                            <?php foreach( $row as $val):?>
+                    <?php foreach( array_chunk($foods_query->posts, 4)  as $rov_index => $row ):?>
+                        <div class="row prices_products" date-page = '<?php echo $rov_index + 1  ?>'>
+                            <?php foreach( $row as $col):?>
                                 <div class="col-xl-6 product">
                                     <div class="product-img">
-                                        <img src= '<?php echo get_field("food-img", $val->ID) ?>' alt="">
+                                        <img src= '<?php echo get_field("food-img", $col->ID) ?>' alt="">
                                     </div>
 
                                     <div class="product-info">
                                         <h1 class="product-info_name"><?php  ?></h1>
                                         <div class="product-info_desc">
                                             <div class="price">
-                                                <span><?php echo get_field("price", $val->ID) ?> </span> | <span class="weight"><?php echo get_field("weight", $val->ID) ?> </span>
+                                                <span><?php echo get_field("price", $col->ID) ?> </span> | <span class="weight"><?php echo get_field("weight", $col->ID) ?> </span>
                                             </div>
-                                            <p><?php echo get_field("food-descriptoin", $val->ID) ?> </p>
+                                            <p><?php echo get_field("food-descriptoin", $col->ID) ?> </p>
 
                                             <div class="product-info_add">
                                                 <button class="add-product btn">Додати до кошика</button>
@@ -161,7 +170,7 @@ get_header();
                     <?php  endforeach;?>  
                     <div class="prices_footer"> 
                         <div class="prices_footer-pagination">
-                            <button class="footer-pagination_prev btn btn-green" >
+                            <button class="footer-pagination_prev btn btn-green" date-page = '<?php echo $rov_index   ?>'>
                                 <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M9 16.5L0.999999 8.5L9 0.5" stroke="#333333"/>
                                 </svg>
@@ -170,7 +179,7 @@ get_header();
                                 <span class="pagination_current">1</span>
                                 <span class="pagination_last">2</span>
                             </div>
-                            <button class="footer-pagination_next btn btn-green" >
+                            <button class="footer-pagination_next btn btn-green" date-page = '<?php echo $rov_index + 1  ?>'>
                                 <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 0.5L9 8.5L1 16.5" stroke="#333333"/>
                                 </svg>
@@ -210,6 +219,7 @@ get_header();
             <?php  endforeach;?>
         </section>
     <?php endif;?>
+    
     
     <section class="booking">
         <div class="booking_inner">
@@ -265,174 +275,91 @@ get_header();
             </div>
         </div>
     </section>
-    <section class="novelty">
-        <div class="novelty-wrapper">
-            <span class="novelty_title fixed-novelty">Новинки</span>
-            <div class="novelty_items" >
-                <div class="novelty-item">
-                    <div class="novelty-item_img" style="background-image: url('img/Novelty/Rectangle_16.png');"></div>
-                    <div class="product-info novelty-info">        
-                        <div class="product-info_desc">
-                            <div class="novelty-info_desc">
-                                <h1 class="product-info_name">Фруктовий мікс</h1>
-                                <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
-                                <div class="price">
-                                    <span>44грн</span> | <span class="weight">400грам</span>
+
+    <?php if( $novelty_post->have_posts() ): ?>
+        <section class="novelty">
+            <div class="novelty-wrapper">
+                <span class="novelty_title fixed-novelty">Новинки</span>
+                <div class="novelty_items">
+                    <?php while ( $novelty_post->have_posts() ) : $novelty_post->the_post(); ?>
+                        <div class="novelty-item">
+                            <div class="novelty-item_img" style="background-image: url('<?php the_field("novelty-img") ?>');"></div>
+                            <div class="product-info novelty-info">        
+                                <div class="product-info_desc">
+                                    <div class="novelty-info_desc">
+                                        <h1 class="product-info_name"><?php the_title() ?></h1>
+                                            <p><?php the_field("novelty-description") ?></p>
+                                        <div class="price">
+                                            <span><?php the_field("novelty-price") ?></span> | <span class="weight"><?php the_field("novelty-weight") ?></span>
+                                        </div>
+                                    </div>
+                                    <div class="product-info_add novelty-info_add">
+                                        <button class="add-product btn">Додати до кошика</button>
+                                        <label for="product-quantity1">Кількість: </label>
+                                        <div class="quantity__holder">
+                                            <div class="holder__button-plus btn">
+                                                +
+                                            </div>
+                                            <div class="holder__content">
+                                                <span>1</span>
+                                                <span>шт.</span>
+                                            </div>
+                                            <div class="holder__button-minus btn">
+                                                -
+                                            </div>
+                                        </div>    
+                                    </div>
                                 </div>
                             </div>
-                            <div class="product-info_add novelty-info_add">
-                                <button class="add-product btn">Додати до кошика</button>
-                                <label for="product-quantity1">Кількість: </label>
-                                <div class="quantity__holder">
-                                    
-                                    <div class="holder__button-plus btn">
-                                        +
-                                    </div>
-                                    <div class="holder__content">
-                                        <span>1</span>
-                                        <span>шт.</span>
-                                    </div>
-                                    <div class="holder__button-minus btn">
-                                        -
-                                    </div>
-                                    
-                                </div>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="novelty-item">
-                    <div class="novelty-item_img" style="background-image: url('img/Novelty/Rectangle_16.png');"></div>
-                    <div class="product-info novelty-info">        
-                        <div class="product-info_desc">
-                            <div class="novelty-info_desc">
-                                <h1 class="product-info_name">Фруктовий мікс</h1>
-                                <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
-                                <div class="price">
-                                    <span>56грн</span> | <span class="weight">500грам</span>
-                                </div>
-                            </div>
-                            <div class="product-info_add novelty-info_add">
-                                <button class="add-product btn">Додати до кошика</button>
-                                <label for="product-quantity1">Кількість: </label>
-                                <div class="quantity__holder">
-                                    
-                                    <div class="holder__button-plus btn">
-                                        +
-                                    </div>
-                                    <div class="holder__content">
-                                        <span>1</span>
-                                        <span>шт.</span>
-                                    </div>
-                                    <div class="holder__button-minus btn">
-                                        -
-                                    </div>
-                                    
-                                </div>    
-                            </div>
-                        </div>
-                    </div>
+                        </div>   
+                    <?php  endwhile;?>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="share">
-        <div class="share-wrapper">
-            <span class="share_title fixed-share">Акції</span>
-            <div class="share-items">
-                <div class="share-item">
-                <div class="share_img" style="background-image: url('img/share/Rectangle_15.png');"></div>
-                <div class="product-info share-info">        
-                    <div class="share-info_desc">
-                        <h1 class="product-info_name">Фірмовий сніданок</h1>
-                        <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
-                        <div class="price">
-                            <span class="price_no-active">54</span> <span class="price_active">44грн</span> | <span class="weight">400грам</span>
-                        </div>
-                    </div>
-                    <div class="product-info_add share-info_add">
-                        <button class="add-product btn">Додати до кошика</button>
-                        <label for="product-quantity1">Кількість: </label>
-                        <div class="quantity__holder">
-                            
-                            <div class="holder__button-plus btn">
-                                +
-                            </div>
-                            <div class="holder__content">
-                                <span>1</span>
-                                <span>шт.</span>
-                            </div>
-                            <div class="holder__button-minus btn">
-                                -
-                            </div>
-                            
-                        </div>    
-                    </div>
-                </div>
-                </div>
+        </section>
+    <?php endif;?>
 
-                <div class="share-item">
-                    <div class="share_img" style="background-image: url('img/share/Rectangle_15.png');"></div>
-                    <div class="product-info share-info">        
-                        <div class="share-info_desc">
-                            <h1 class="product-info_name">Фірмовий сніданок</h1>
-                            <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
-                            <div class="price">
-                                <span class="price_no-active">54</span> <span class="price_active">44грн</span> | <span class="weight">400грам</span>
-                            </div>
-                        </div>
-                        <div class="product-info_add share-info_add">
-                            <button class="add-product btn">Додати до кошика</button>
-                            <label for="product-quantity1">Кількість: </label>
-                            <div class="quantity__holder">
-                                
-                                <div class="holder__button-plus btn">
-                                    +
+    <?php if( $share_post->have_posts() ): ?>
+        <section class="share">
+            <div class="share-wrapper">
+                <span class="share_title fixed-share">Акції</span>
+                <div class="share-items">
+                    <?php while ( $share_post->have_posts() ) : $share_post->the_post(); ?>
+                        <div class="share-item">
+                            <div class="share_img" style="background-image: url('<?php the_field("share-img") ?>');"></div>
+                            <div class="product-info share-info">        
+                                <div class="share-info_desc">
+                                    <h1 class="product-info_name"><?php the_title() ?></h1>
+                                        <p><?php the_field("share-description") ?></p>
+                                    <div class="price">
+                                        <span class="price_no-active"><?php the_field("share-no-price") ?></span> 
+                                        <span class="price_active"><?php the_field("share-price") ?></span> | 
+                                        <span class="weight"><?php the_field("share-weight") ?></span>
+                                    </div>
                                 </div>
-                                <div class="holder__content">
-                                    <span>1</span>
-                                    <span>шт.</span>
-                                </div>
-                                <div class="holder__button-minus btn">
-                                    -
-                                </div>
-                                
-                            </div>    
-                        </div>
-                    </div>
-                    </div>
+                                <div class="product-info_add share-info_add">
+                                    <button class="add-product btn">Додати до кошика</button>
+                                    <label for="product-quantity1">Кількість: </label>
+                                    <div class="quantity__holder">
 
-                <div class="share-item">
-                <div class="share_img" style="background-image: url('img/share/Rectangle_17.png');"></div>
-                <div class="product-info share-info">        
-                    <div class="share-info_desc">
-                        <h1 class="product-info_name">Тістечка “Вітаміний бум”</h1>
-                        <p>Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
-                        <div class="price">
-                            <span class="price_no-active">78</span> <span class="price_active">52грн</span> | <span class="weight">340грам</span>
+                                        <div class="holder__button-plus btn">
+                                            +
+                                        </div>
+                                        <div class="holder__content">
+                                            <span>1</span>
+                                            <span>шт.</span>
+                                        </div>
+                                        <div class="holder__button-minus btn">
+                                            -
+                                        </div>
+
+                                    </div>    
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="product-info_add share-info_add">
-                        <button class="add-product btn">Додати до кошика</button>
-                        <label for="product-quantity1">Кількість: </label>
-                        <div class="quantity__holder">
-                            
-                            <div class="holder__button-plus btn">
-                                +
-                            </div>
-                            <div class="holder__content">
-                                <span>1</span>
-                                <span>шт.</span>
-                            </div>
-                            <div class="holder__button-minus btn">
-                                -
-                            </div>
-                            
-                        </div>    
-                    </div>
-                </div>
+                    <?php  endwhile;?>
                 </div>
             </div>
-        </div>
-    </section>
-    <?php get_footer(); ?>
+        </section>
+    <?php endif;?>
+
+<?php get_footer(); ?>

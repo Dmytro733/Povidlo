@@ -42,8 +42,9 @@ function povidlo_scripts() {
     wp_enqueue_script( 'jQuery.js', get_template_directory_uri() . '/js/jQuery.js');
 	wp_enqueue_script( 'povidlo-my.js', get_template_directory_uri() . '/js/mine.js');
 
-	wp_enqueue_style( 'povidlo-style', get_template_directory_uri() . '/css/style.css');
+	
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap-grid.min.css');
+	wp_enqueue_style( 'povidlo-style', get_template_directory_uri() . '/css/style.css');
 
 }
 add_action( 'wp_enqueue_scripts', 'povidlo_scripts' );
@@ -51,7 +52,9 @@ add_action( 'wp_enqueue_scripts', 'povidlo_scripts' );
 
 add_theme_support('post-thumbnails');
 
-
+/*
+*register taxonomy for foods
+*/
 
 add_action( 'init', 'create_taxonomy' );
 function create_taxonomy(){
@@ -76,8 +79,12 @@ function create_taxonomy(){
 	] );
 }
 
-add_action( 'init', 'register_post_types' );
-function register_post_types(){
+/*
+*register post foods
+*/
+
+add_action( 'init', 'register_post_foods' );
+function register_post_foods(){
 	register_post_type( 'foods', [
 		'labels' => [
 			'name'               => 'Страви', // основное название для типа записи
@@ -96,6 +103,9 @@ function register_post_types(){
 	] );
 }
 
+/*
+*register post novelty
+*/
 
 add_action( 'init', 'register_post_novelty' );
 
@@ -117,6 +127,10 @@ function register_post_novelty(){
 	] );
 }
 
+/*
+*register post share
+*/
+
 add_action( 'init', 'register_post_share' );
 function register_post_share(){
 	register_post_type( 'share', [
@@ -134,5 +148,61 @@ function register_post_share(){
 		'supports'            => [ 'title' ],
 		'has_archive'         => false,
 	] );
+}
+
+/*
+*register post comments
+*/
+
+add_action( 'init', 'register_post_comments' );
+function register_post_comments(){
+	register_post_type( 'comments', [
+		'labels' => [
+			'name'               => 'Коментарі', // основное название для типа записи
+			'singular_name'      => 'Коментар', // название для одной записи этого типа
+			'add_new'            => 'Добавити коментар', // для добавления новой записи
+			'add_new_item'       => 'Добавити новий коментар', // заголовка у вновь создаваемой записи в админ-панели.
+			'edit_item'          => 'Редагувати коментар', // для редактирования типа записи
+			'search_items'       => 'Пошук по коментарях', // для поиска по этим типам записи
+		],
+		'public'              => true,
+		'show_in_menu'        => true,
+		'menu_icon'           => 'dashicons-edit',
+		'supports'            => [ 'title' ],
+		'has_archive'         => false,
+	] );
+}
+
+
+/*
+*options page acf
+*/
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Settings footer',
+		'menu_title'	=> 'Settings footer',
+		'menu_slug' 	=> 'settings-footer',
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Work schedule',
+		'menu_title'	=> 'Work schedule',
+		'parent_slug'	=> 'settings-footer',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Contacts',
+		'menu_title'	=> 'Contacts',
+		'parent_slug'	=> 'settings-footer',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Social',
+		'menu_title'	=> 'Social',
+		'parent_slug'	=> 'settings-footer',
+	));
+	
 }
 ?>

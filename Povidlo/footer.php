@@ -8,70 +8,58 @@
  * @package Povidli
  */
 
+    $comments_post = new WP_Query( [ 
+        'post_type' => 'comments',
+    ]);
+
 ?>
 <footer class="footer">
-        <div class="comments">
-            <div class="comments_items">
-                <div class="comment_item">
-                    <div class="comment_img" style="background-image: url('img/comments/Rectangle_26.png');"></div>
-                    <div class="comment_info">
-                        <span class="comment_name">Іванка</span>
-                        <div class="rate">
-                            <span class="rate_user">4.5</span>
-                            <span>/</span>
-                            <span>5</span>
+        <?php if( $comments_post->have_posts() ): ?> 
+            <div class="comments">
+                <div class="comments_items">
+                    <?php while ( $comments_post->have_posts() ) : $comments_post->the_post(); ?>
+                        <div class="comment_item">
+                            <div class="comment_img" style="background-image: url('<?php the_field("comment-img-user") ?>');"></div>
+                            <div class="comment_info">
+                                <span class="comment_name"><?php the_field("name-user") ?></span>
+                                <div class="rate">
+                                    <span class="rate_user"><?php the_field("comment-user-rate") ?></span>
+                                    <span>/</span>
+                                    <span>5</span>
+                                </div>
+                                <p class="text"><?php the_field("comment-user-text") ?></p>
+                            </div>
                         </div>
-                        <p class="text">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
-                    </div>
-                </div>
-                <div class="comment_item">
-                    <div class="comment_img" style="background-image: url('img/comments/Rectangle_26.png');"></div>
-                    <div class="comment_info">
-                        <span class="comment_name">Іванка</span>
-                        <div class="rate">
-                            <span class="rate_user">4.5</span>
-                            <span>/</span>
-                            <span>5</span>
-                        </div>
-                        <p class="text">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
-                    </div>
-                </div>
-                <div class="comment_item">
-                    <div class="comment_img" style="background-image: url('img/comments/Rectangle_26.png');"></div>
-                    <div class="comment_info">
-                        <span class="comment_name">Іванка</span>
-                        <div class="rate">
-                            <span class="rate_user">4.5</span>
-                            <span>/</span>
-                            <span>5</span>
-                        </div>
-                        <p class="text">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію  сторінки. Сенс використання Lorem Ipsum полягає в тому.</p>
-                    </div>
+                    <?php  endwhile;?>    
                 </div>
             </div>
-        </div>
+        <?php endif;?>
+        
         <div class="company-info" id="company-info">
             <div class="company-info_wrapper">
                 <div class="company-info_inner">
                     <div class="company-info_top row">
+                        
                         <div class="left-top">
                             <span class="work-time_title">Ми відкриті</span>
-                            <ul class="work-time">
-                                <li class="work-time_item"><span class="item-days">Понеділок</span><span class="item-hours">11.00-23.00</span></li>
-                                <li class="work-time_item"><span class="item-days">Вівторок</span> <span class="item-hours">11.00-23.00</span></li>
-                                <li class="work-time_item"><span class="item-days">Середа</span>   <span class="item-hours">11.00-23.00</span></li>
-                                <li class="work-time_item"><span class="item-days">Четвер</span>   <span class="item-hours">11.00-23.00</span></li>
-                                <li class="work-time_item"><span class="item-days">П'ятниця</span> <span class="item-hours">11.00-23.00</span></li>
-                                <li class="work-time_item"><span class="item-days">Субота</span>   <span class="item-hours">11.00-23.00</span></li>
-                                <li class="work-time_item"><span class="item-days">Неділя</span>   <span class="item-hours">11.00-23.00</span></li>
-                            </ul>
+                            <?php if( have_rows('work-schedule', 'option') ): ?>
+                                <ul class="work-time">
+                                    <?php while( have_rows('work-schedule', 'option') ): the_row(); ?>
+                                        <li class="work-time_item"><span class="item-days"><?php the_sub_field('work-day'); ?></span><span class="item-hours"><?php echo get_sub_field('open-time'). " - " .get_sub_field('close-time'); ?></span></li>
+                                    <?php endwhile; ?>
+                                </ul>
+                            <?php endif; ?>
                         </div>
+                        
                         <div class="right-top">
                             <span class="contact_title">Контакти</span>
-                            <ul class="contact">
-                                <li>+38 (098) 252-62-56</li>
-                                <li>+38 (095) 657-88-44</li>
-                            </ul>
+                            <?php if( have_rows('contacts', 'option') ): ?>
+                                <ul class="contact">
+                                    <?php while( have_rows('contacts', 'option') ): the_row(); ?>
+                                        <li><?php the_sub_field('contact-number'); ?></li>
+                                    <?php endwhile; ?>
+                                </ul>
+                            <?php endif; ?>
                             <form class="contact_form">
                                 <textarea name="message" placeholder="*Твоє повідомлення"></textarea>
                                 <input class="btn input-name" type="text" placeholder="*Ім'я">

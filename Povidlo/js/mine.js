@@ -33,15 +33,17 @@ $(document).ready(function(){
     });
 
     $('.prices_footer .footer-pagination_next').click(function(){
-        let foodAtr = $(this).attr('data-type-of-food');
+        let foodAtr = $(this).attr('date-page');
+        console.log(foodAtr)
         $('.prices_products').addClass('hide');
-        $(`.prices_products[data-type-of-food = ${foodAtr}]`).removeClass('hide');
+        $(`.prices_products[date-page = ${foodAtr}]`).removeClass('hide');
     });
 
     $('.prices_footer .footer-pagination_prev').click(function(){
-        let foodAtr = $(this).attr('data-type-of-food');
+        let foodAtr = $(this).attr('date-page');
+        console.log(foodAtr)
         $('.prices_products').addClass('hide');
-        $(`.prices_products[data-type-of-food = ${foodAtr}]`).removeClass('hide');
+        $(`.prices_products[date-page = ${foodAtr}]`).removeClass('hide');
     });
 
     $('.slider_menu-items .item').click(function(){
@@ -51,7 +53,7 @@ $(document).ready(function(){
 
     });
 
-    
+    productShow();
     slickGallery();
     slickNovelty();
     slickShare();
@@ -60,6 +62,12 @@ $(document).ready(function(){
     sliderShow();
     
 });
+
+function productShow(){
+    let foodAtr = $('.prices_products').attr('date-page');
+    $('.prices_products').addClass('hide');
+    $(`.prices_products[date-page = ${foodAtr}]`).removeClass('hide');
+}
 
 function priceShow(){
     let foodAtr = $('.prices_menu-items .item').attr('data-type-of-food');
