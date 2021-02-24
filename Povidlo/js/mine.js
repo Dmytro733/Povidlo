@@ -1,8 +1,5 @@
 $(document).ready(function(){
-    var basket = [{id:1, name: 'Паста ”Italiano pronto”', value: 57},
-            {id:5, name: 'Салат ”Мікс зелені”', value: 57},
-            {id:9, name: 'Піцца ”Селянська”', value: 57}],
-        burgerIcon = $('.burger'),
+    var burgerIcon = $('.burger'),
         listMenu = $('.header_menu-items'),
         cart = $('.cart'),
         cartMenu = $('.cart-in-menu'),
@@ -15,15 +12,17 @@ $(document).ready(function(){
     })
 
     $(document).on('click', '.delete', function(){
-        let productId = $(this).attr('data-product-id');
-            productId = parseInt(productId);
-    
-            removeItem(basket, function(i){
-                if(i.id == productId){
-                    basket.splice(i, 1)
-                }
-            })
+        let dishId = $(this).attr('data-id');
+        console.log(dishId)
+        $.post(urlAdminAjax, {
+            action: "delete_from_basket",
+            id: dishId,
+        },function(data) {
+            let basket = JSON.parse(data);
+            renderBasketAmount(basket);
             renderBasket(basket, basketList);
+        })
+        
     })
 
     $('.prices_menu-items .item').click(function(){
@@ -34,14 +33,12 @@ $(document).ready(function(){
 
     $('.prices_footer .footer-pagination_next').click(function(){
         let foodAtr = $(this).attr('date-page');
-        console.log(foodAtr)
         $('.prices_products').addClass('hide');
         $(`.prices_products[date-page = ${foodAtr}]`).removeClass('hide');
     });
 
     $('.prices_footer .footer-pagination_prev').click(function(){
         let foodAtr = $(this).attr('date-page');
-        console.log(foodAtr)
         $('.prices_products').addClass('hide');
         $(`.prices_products[date-page = ${foodAtr}]`).removeClass('hide');
     });
@@ -60,8 +57,55 @@ $(document).ready(function(){
     slickComments();
     priceShow();
     sliderShow();
-    
+    showLogoScrollBottom()
+
+    $('.cart').click(function(){
+        location.href = "корзина";
+    })
+
+    $('.go-to-cart').click(function(){
+        location.href = "корзина";
+    })   
+
+    $('.add-product').click(function(){
+        let dishId = $(this).attr('date-id');
+        $.post(urlAdminAjax, {
+            action: "add_to_basket",
+            id: dishId,
+        },function(data) {
+            let basket = JSON.parse(data);
+            renderBasketAmount(basket);
+        })
+    });
+
+    function renderBasketAmount(basket){
+        let total = 0; 
+        basket.forEach(function(item){
+            total += item.amount;
+            return total;
+        });
+        $('.cart-number').text(total);
+    };
 });
+
+
+
+function showLogoScrollBottom(){
+    let headerMenu = $('.header_menu');
+    let logoShow = $('.header_scroll-logo');
+
+    $(document).scroll(function() {
+        let scroll =  $(window).scrollTop();
+        if(scroll > 50){
+            headerMenu.addClass("header_scroll");
+            logoShow.css({ display : "block"});
+        }else{
+            headerMenu.removeClass("header_scroll");
+            logoShow.css({ display : "none"});
+        }
+        
+    });
+}
 
 function productShow(){
     let foodAtr = $('.prices_products').attr('date-page');
@@ -168,13 +212,6 @@ function slickNovelty(){
         ]
     });
 }
-
-
-function removeItem(array, search) {
-    return array.filter(function(item) {
-        return search(item)
-    })
-};
     
 function hideBlocks(){
     $('.all-price').addClass('hide');
@@ -190,15 +227,15 @@ function renderBasket(array, basketList){
     if(array.length){
         array.forEach(function(item){
             let liBasket =
-            `<li class="list-cart_item">
+            `<li class="list-cart_item" data-id='${item.id}'>
                     <span class="product-info_name">${item.name}</span>
                     <div class="item_wrap-q">
                         <div class="price value">
                             <span>
-                                57грн
+                                ${item.price}
                             </span>|
                             <span class="weight">
-                                450грам
+                                ${item.weight}
                             </span>
                         </div>
                         <div class="quantity__holder number">
@@ -206,7 +243,7 @@ function renderBasket(array, basketList){
                                 +
                             </div>
                             <div class="holder__content">
-                                <span>1</span>
+                                <span>${item.amount}</span>
                                 <span>шт.</span>
                             </div>
                             <div class="holder__button-minus btn">
@@ -217,10 +254,10 @@ function renderBasket(array, basketList){
                     <div class="item_wrap-p">
                         <div class="price value">
                             <span>
-                                ${item.value}грн
+                                ${item.price}грн
                             </span>
                         </div>
-                        <button class="delete" data-product-id='${item.id}'>
+                        <button class="delete" data-id='${item.id}'>
                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0)">
                                 <path d="M15.9478 9.05753C15.6244 9.05753 15.3623 9.31963 15.3623 9.64301V20.7086C15.3623 21.0317 15.6244 21.2941 15.9478 21.2941C16.2712 21.2941 16.5333 21.0317 16.5333 20.7086V9.64301C16.5333 9.31963 16.2712 9.05753 15.9478 9.05753Z" fill="black"/>

@@ -42,7 +42,7 @@ html{
 }
 
 body {
-  min-height: 100vh;
+  min-height: 90vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
@@ -59,6 +59,10 @@ ol[class] {
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
           text-decoration-skip-ink: auto;
+}
+
+a{
+    text-decoration: none;
 }
 
 img {
@@ -105,6 +109,9 @@ p{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+            transition: 0.5s;
 }
 
 .header_menu-items{
@@ -130,7 +137,9 @@ p{
 }
 
 .header_menu .menu-item a:hover,
-.header_menu .menu-item a:active{
+.header_menu .menu-item a:active,
+.header_menu .menu-item a:focus,
+.header_menu .menu-item a:visited{
     background: #ffffff;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
@@ -138,13 +147,23 @@ p{
 }
 
 .header_scroll{
-    padding: 1.5% 4%;
+    padding: 1% 4%;
     position: fixed;
     top: 0;
     width: 100%;
     -webkit-box-shadow: 0px 4px 30px rgb(51 51 51 / 13%);
             box-shadow: 0px 4px 30px rgb(51 51 51 / 13%);
     background: #fff;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.header_scroll .menu-item a:hover,
+.header_scroll .menu-item a:active,
+.header_scroll .menu-item a:focus,
+.header_scroll .menu-item a:visited{
+    background: #F1E8EB;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
@@ -162,6 +181,7 @@ p{
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    cursor: pointer;
 }
 
 .cart-number{
@@ -334,7 +354,9 @@ p{
 }
 
 .item:hover,
-.item:active{
+.item:active,
+.item:focus,
+.item:visited{
     border-bottom: 2px solid rgba(51, 51, 51, 0.5);
     font-size: 33px;
     margin: 0;
@@ -1011,6 +1033,10 @@ textarea{
     display: flex;
 }
 
+.footer-wrapper_social a path{
+    fill: #fff;
+}
+
 .footer-wrapper_text {
     font-size: 16px;
     color: #fff;
@@ -1219,6 +1245,11 @@ textarea{
 
 .hide{
     display: none;
+}
+
+.not-found{
+    margin-top: 130px;
+    padding: 100px 0 100px 0;
 }
 
 @media screen and (max-width: 1400px){
