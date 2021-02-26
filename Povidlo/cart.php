@@ -16,8 +16,10 @@
                 <span class="value">Загальна вартість</span>
             </div>
             <ul class="list-cart_items">                   
-                <?php foreach($_SESSION['basket_array'] as $basket_item):?>                
-                    <li class="list-cart_item product" date-id = '<?php echo $basket_item["id"] ?>' date-amount = '<?php echo $basket_item["amount"] ?>'>
+                <?php foreach($_SESSION['basket_array'] as $basket_item):
+                    print_r($basket_item);
+                    ?>                
+                    <li class="list-cart_item product cart" date-id = '<?php echo $basket_item["id"] ?>' date-amount ='<?php echo $basket_item["amount"] ?>' >
                         <span class="product-info_name"><?php echo $basket_item["name"] ?></span>
                         <div class="item_wrap-q">
                             <div class="price value">
@@ -44,7 +46,7 @@
                         <div class="item_wrap-p">
                             <div class="price value">
                                 <span class="total_price">
-                                   0грн
+                                    <?php echo $basket_item["total_price"] ?>грн
                                 </span>
                             </div>
                             <button class="delete" data-id='<?php echo $basket_item["id"] ?>'>

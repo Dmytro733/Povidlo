@@ -127,7 +127,7 @@
                             <?php foreach( $row as $col):
                                 // print_r($row);
                                 ?>
-                                <div class="col-xl-6 product" date-id = '<?php echo $col->ID ?>' date-amount = 1>
+                                <div class="col-xl-6 product" date-id = '<?php echo $col->ID ?>' date-amount = 1 date-total-price = 0>
                                     <div class="product-img">
                                         <img src= '<?php echo get_field("food-img", $col->ID) ?>' alt="">
                                     </div>
