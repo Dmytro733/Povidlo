@@ -16,28 +16,24 @@
                 <span class="value">Загальна вартість</span>
             </div>
             <ul class="list-cart_items">                   
-                <?php foreach($_SESSION['basket_array'] as $basket_item):
-            
-                    ?>
-
-                
-                    <li class="list-cart_item" date-id = '<?php echo $basket_item["id"] ?>'>
+                <?php foreach($_SESSION['basket_array'] as $basket_item):?>                
+                    <li class="list-cart_item product" date-id = '<?php echo $basket_item["id"] ?>' date-amount = '<?php echo $basket_item["amount"] ?>'>
                         <span class="product-info_name"><?php echo $basket_item["name"] ?></span>
                         <div class="item_wrap-q">
                             <div class="price value">
-                                <span>
-                                    <?php echo $basket_item["price"] ?>
+                                <span class="price">
+                                    <?php echo $basket_item["price"]?>грн.
                                 </span>|
                                 <span class="weight">
-                                    <?php echo $basket_item["weight"] ?>
+                                    <?php echo $basket_item["weight"]?>грам
                                 </span>
                             </div>
                             <div class="quantity__holder number">
-                                <div class="holder__button-plus btn">
+                                <div class="holder__button-plus btn" >
                                     +
                                 </div>
                                 <div class="holder__content">
-                                    <span><?php echo $basket_item["amount"] ?></span>
+                                    <span class='amount'><?php echo $basket_item["amount"] ?></span>
                                     <span>шт.</span>
                                 </div>
                                 <div class="holder__button-minus btn">
@@ -47,8 +43,8 @@
                         </div>
                         <div class="item_wrap-p">
                             <div class="price value">
-                                <span>
-                                    <?php echo $basket_item["price"] ?>грн
+                                <span class="total_price">
+                                   0грн
                                 </span>
                             </div>
                             <button class="delete" data-id='<?php echo $basket_item["id"] ?>'>
@@ -67,12 +63,11 @@
                                     </svg>
                             </button>
                         </div>
-                    
                     </li>
                 <?php endforeach ?>
             </ul>
             <div class="all-price">
-                <span>Всього на суму : <span>171грн.</span></span>
+                <span>Всього на суму : <span class="all_total_price">грн.</span></span>
             </div>
         </div>
     </section>

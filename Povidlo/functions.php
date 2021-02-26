@@ -27,13 +27,20 @@ add_theme_support(
 	)
 );
 
+/*
+* add_to_basket_action
+*/
+
 add_action('wp_ajax_add_to_basket', 'add_to_basket_action');
 add_action('wp_ajax_nopriv_add_to_basket', 'add_to_basket_action');
 
 function add_to_basket_action(){
 	$product_id = $_POST['id'];
-	$basket_array = add_to_basket($_SESSION['basket_array'] ,$product_id);
-	$_SESSION['basket_array'] = $basket_array;
+	$amount_product = $_POST['amount'];
+	// $_SESSION['basket_array'] = [];
+	// wp_die();
+	$basket_array = add_to_basket($_SESSION['basket_array'] ,$product_id, $amount_product);
+	$_SESSION['basket_array'] = $basket_array; 	
 	echo json_encode($basket_array);
 	wp_die();
 }
@@ -47,7 +54,7 @@ function is_product_in_basket($basket, $product_id){
 	return false;
 }
 
-function add_to_basket($basket ,$product_id){
+function add_to_basket($basket ,$product_id, $amount_product){
 	
 	if(is_product_in_basket($basket, $product_id)){
 		foreach($basket as $key => $basket_item){
@@ -58,7 +65,7 @@ function add_to_basket($basket ,$product_id){
 	}else{
 		array_push($basket, [
 			"name" => get_field("food-name", $product_id) , 
-			"amount"=> 1, 
+			"amount"=> $amount_product, 
 			"id" => $product_id, 
 			"price" =>get_field("price", $product_id), 
 			"weight"=>get_field("weight", $product_id), 
@@ -68,23 +75,34 @@ function add_to_basket($basket ,$product_id){
 	return $basket;
 }
 
+/*
+* delete_from_basket_action
+*/
 add_action('wp_ajax_delete_from_basket', 'delete_from_basket_action');
 add_action('wp_ajax_nopriv_delete_from_basket', 'delete_from_basket_action');
 
 function delete_from_basket_action(){
 	$product_id = $_POST['id'];
+	// $_SESSION['basket_array'] = [];
+	// wp_die();
 	$basket_array = delete_from_basket($_SESSION['basket_array'] ,$product_id);
 	$_SESSION['basket_array'] = $basket_array;
 	echo json_encode($basket_array);
 	wp_die();
 }
 
-function delete_from_basket($basket, $id){
-	foreach($basket as $basket_item){
-		array_splice($basket, $basket_item['id']);
+function delete_from_basket($basket, $product_id){
+	foreach($basket as $key => $basket_item){
+		if($basket_item['id'] == $product_id){
+			unset($basket[$key]);
+			sort($basket);
+		}
 	}
-	
 	return $basket;
+}
+
+function render_total_price(){
+
 }
 
 /**
@@ -95,6 +113,7 @@ function povidlo_scripts() {
 
     wp_enqueue_script( 'jQuery.js', get_template_directory_uri() . '/js/jQuery.js');
 	wp_enqueue_script( 'povidlo-my.js', get_template_directory_uri() . '/js/mine.js');
+	wp_enqueue_script( 'cart-povidlo.js', get_template_directory_uri() . '/js/cart.js');
 
 	
     wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap-grid.min.css');

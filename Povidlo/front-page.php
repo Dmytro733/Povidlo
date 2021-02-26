@@ -124,8 +124,10 @@
                     
                     <?php foreach( array_chunk($foods_query->posts, 4)  as $rov_index => $row ):?>
                         <div class="row prices_products" date-page = '<?php echo $rov_index + 1  ?>'>
-                            <?php foreach( $row as $col):?>
-                                <div class="col-xl-6 product" date-id = '<?php echo $col->ID ?>'>
+                            <?php foreach( $row as $col):
+                                // print_r($row);
+                                ?>
+                                <div class="col-xl-6 product" date-id = '<?php echo $col->ID ?>' date-amount = 1>
                                     <div class="product-img">
                                         <img src= '<?php echo get_field("food-img", $col->ID) ?>' alt="">
                                     </div>
@@ -139,14 +141,14 @@
                                             <p><?php echo get_field("food-descriptoin", $col->ID) ?> </p>
 
                                             <div class="product-info_add">
-                                                <button class="add-product btn" date-id = '<?php echo $col->ID ?>'>Додати до кошика</button>
+                                                <button class="add-product btn">Додати до кошика</button>
                                                 <label for="quantity__holder">Кількість: </label>
                                                 <div class="quantity__holder">
                                                     <div class="holder__button-plus btn">
                                                         +
                                                     </div>
                                                     <div class="holder__content">
-                                                        <span>1</span>
+                                                        <span class='amount'>1</span>
                                                         <span>шт.</span>
                                                     </div>
                                                     <div class="holder__button-minus btn">
